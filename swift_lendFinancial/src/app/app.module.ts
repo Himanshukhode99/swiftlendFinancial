@@ -7,6 +7,7 @@ import { HomeDashboardComponent } from './entry/home-dashboard/home-dashboard.co
 import { HomeHeaderComponent } from './templates/home-header/home-header.component';
 import { HomeFooterComponent } from './templates/home-footer/home-footer.component';
 import { MenuComponent } from './templates/menu/menu.component';
+import { AppHeaderComponent } from './templates/app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MenuComponent } from './templates/menu/menu.component';
     HomeDashboardComponent,
     HomeHeaderComponent,
     HomeFooterComponent,
-    MenuComponent
+    MenuComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
