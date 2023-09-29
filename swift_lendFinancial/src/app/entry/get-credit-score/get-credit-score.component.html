@@ -1,1 +1,62 @@
-<p>get-credit-score works!</p>
+
+      
+      
+  <!-- The Modal -->
+  <div class="modal" id="myModal" >
+   
+      
+  
+    <!-- Modal Header -->
+    <!-- <div class="modal-header">
+      <h4 class="title" style="color: blueviolet;">Check EMI Here</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" style="margin-right: 20px;" (click)="Closedmodel()"></button>
+    </div> -->
+
+    <!-- Modal body -->
+
+        <div class="loan-calculator" >
+            <div class="top">
+                
+                <h2 align="center" style="color: white;font-size: 30px;font-weight: 900;">Check Your Credit Score Here</h2>
+                <form [formGroup]="emiForm" >
+                    <div class="group">
+                        <div class="title" style="color: white;">Pan Number</div>
+                        <input type="text" placeholder="Pan Number" class="loan-amount" formControlName="panNumber"/>
+                    </div>
+    
+                    <div class="group">
+                        <div class="title" style="color: white;">Enter Name</div>
+                        <input type="text" placeholder="Enter NAme" class="interest-rate" formControlName="interest" />
+                    </div>
+    
+                    <div class="group">
+                        <div class="title" style="color: white;">Date Of Birth</div>
+                        <input type="date" placeholder="Enter date" class="loan-tenure"  formControlName="tenure"/>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="result">
+                <div class="left">
+                    <div class="loan-emi">
+                        <h3>Your Credit Score</h3>
+                        <div class="value">{{cibil}}</div>
+                    </div>
+    
+                  
+                    <button class="calculate-btn" (click)="  generateCibil()" style="margin-left: 250px;">Get Your Cibil</button>
+                    <button type="button" class="calculate-btn" data-bs-dismiss="modal" style="margin-left: 250px;" (click)="Closedmodel()">X</button>
+                </div>
+                <!-- <div class="right">
+                    chart
+                </div> -->
+            </div>
+        </div>
+   
+
+     
+           </div>
+       
+    
+ 
+   <router-outlet></router-outlet> 

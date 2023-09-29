@@ -15,6 +15,7 @@ import { EnquiryComponent } from './entry/enquiry/enquiry.component';
 import { GetCreditScoreComponent } from './entry/get-credit-score/get-credit-score.component';
 import { EligibilityComponent } from './entry/eligibility/eligibility.component';
 import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
+import{ ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
