@@ -8,6 +8,13 @@ import { HomeHeaderComponent } from './templates/home-header/home-header.compone
 import { HomeFooterComponent } from './templates/home-footer/home-footer.component';
 import { MenuComponent } from './templates/menu/menu.component';
 import { AppHeaderComponent } from './templates/app-header/app-header.component';
+import { LoginComponent } from './entry/login/login.component';
+import { AboutUsComponent } from './entry/about-us/about-us.component';
+import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.component';
+import { EnquiryComponent } from './entry/enquiry/enquiry.component';
+import { GetCreditScoreComponent } from './entry/get-credit-score/get-credit-score.component';
+import { EligibilityComponent } from './entry/eligibility/eligibility.component';
+import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,14 @@ import { AppHeaderComponent } from './templates/app-header/app-header.component'
     HomeHeaderComponent,
     HomeFooterComponent,
     MenuComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    LoginComponent,
+    AboutUsComponent,
+    EmiCalculatorComponent,
+    EnquiryComponent,
+    GetCreditScoreComponent,
+    EligibilityComponent,
+    ApplyNowComponent
   ],
   imports: [
     BrowserModule,
