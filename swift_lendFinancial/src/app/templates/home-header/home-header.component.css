@@ -1,0 +1,67 @@
+/* header css */
+#header{
+    height: 70px;
+    background-color: #f5f0f6;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#logo{
+    height: 70px;
+    width: 280px;
+    float: left;
+    
+}
+
+#logo:hover{
+
+    filter: blur(.5px);
+    cursor: pointer;
+}
+
+
+button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: 0;
+    background-color: #f5f0f6;
+}
+
+#BUT{
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: bold;
+    font-size: large;
+    color: #c60c15;
+    transform: scale(1);
+    transition: all .5s;
+    
+}
+#BUT:hover{
+    transform: scale(1.5);
+
+    cursor: pointer;
+
+}
+
+#login{
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: bold;
+    font-size: large;
+    color: #c60c15;
+    transform: scale(1);
+    transition: all .5s;
+
+}
+
+#login:hover{
+
+    color: #f5f0f6;
+    background-color: #c60c15;
+    border-radius: 10px;
+    transform: scale(1.5);
+
+    cursor: pointer;
+
+
+}

@@ -1,0 +1,185 @@
+/* #main{
+
+    width: 80%;
+    height: 600px;
+    position: relative;
+    margin: auto;
+    background-color: aqua;
+
+    
+}
+#content{
+    width: 70%;
+    height: 500px;
+    margin:auto;
+   border: 1px bro;
+   background-color: aquamarine;
+   
+}
+
+#car1{
+  margin-top:15%;
+    float: left;
+    
+}
+#car2{
+    margin-top:15%;
+    float: right;
+   
+}
+#TextContaint{
+    background-color: blueviolet;
+} */
+
+
+
+
+#left{
+
+   
+    margin-top: 70px;
+   
+    float: left;
+
+    height: 300px;
+    width: 30%;
+    display: flex;
+   justify-content: center;
+    
+}
+
+#right{
+    margin-top: 70px;
+    float: right;
+    
+    height: 300px;
+    width: 30%;
+    display: flex;
+   justify-content: center;
+}
+#center{
+    margin-top: 50px;
+    width: 40%;
+    float: left;
+    height: 300px;
+   
+    border-radius: 30px;
+    transform: scale(1);
+    transition: all .5s;
+}
+
+
+#cars{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    transform:scale(1.5) ;
+    transition: all .5s;
+    
+}
+
+#fulladd{
+
+    height: 400px;
+    width: auto;
+    background-color: #f5f0f6;
+    margin-top: 5px;
+    border-radius: 30px;
+    
+
+}
+
+
+#addText{
+    color: #AA141D;
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    transition: all .5s;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    
+}
+#addTex{
+    color: #AA141D;
+    display: flex;
+    transition: all .5s;
+    
+    justify-content: center;
+}
+
+#fulladd:hover #cars{
+   transform: scale(1);
+    transition: all .5s;
+    filter: blur(1px);
+}
+#fulladd:hover #center{
+
+    transform: scale(1.2);
+    transition: all .5s;
+    
+    
+}
+
+#fulladd:hover #addText{
+    transition: all .5s;
+    display: none
+}
+#fulladd:hover #addTex{
+    transition: all .5s;
+    display: none
+}
+
+#offers{
+    
+    display: none;
+    transition: all.5s;
+}
+
+#fulladd:hover #offers{
+display: contents;
+
+transition: all .5s;
+    
+    margin-left: 30px;
+
+    
+}
+
+#calcu{
+color: #999898;
+display: flex;
+justify-content:space-around;
+margin-right: 100px;
+margin-left: 100px;
+
+
+    
+}
+
+#downBut{
+
+    height: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    
+
+
+}
+
+#calculattt{
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    color: #999898;
+}
+#calculatter:hover #calcu  {
+    color: #aa141d;
+}
+
+ #calculatter:hover #calculattt{
+    color: #aa141d;
+ }

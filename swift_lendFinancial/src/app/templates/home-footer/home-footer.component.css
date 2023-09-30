@@ -1,0 +1,29 @@
+.back{
+    background-color:#AA141D;
+    text-align: center;  
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: bolder; 
+     
+    
+}
+.icon{
+    color:#AA141D;
+    text-align: center;
+    background-color: #f5f0f6;
+
+}
+#icon{
+    margin: 20px;
+    scale: 1.5;
+    margin-right: 50px;
+   
+}
+#last{
+    height: 40px;
+    
+display: flex;
+justify-content: center;
+margin-top: 0;
+
+    background-color: black;
+}
