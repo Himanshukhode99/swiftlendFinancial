@@ -15,7 +15,8 @@ import { EnquiryComponent } from './entry/enquiry/enquiry.component';
 import { GetCreditScoreComponent } from './entry/get-credit-score/get-credit-score.component';
 import { EligibilityComponent } from './entry/eligibility/eligibility.component';
 import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
-import{ ReactiveFormsModule } from '@angular/forms'
+import{ ReactiveFormsModule } from '@angular/forms';
+import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import{ ReactiveFormsModule } from '@angular/forms'
     EnquiryComponent,
     GetCreditScoreComponent,
     EligibilityComponent,
-    ApplyNowComponent
+    ApplyNowComponent,
+    ApplicationDashboardComponent
   ],
   imports: [
     BrowserModule,
