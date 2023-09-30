@@ -39,15 +39,15 @@ export class GetCreditScoreComponent {
   modeldiv.style.display='block';
   }
     }
-    update() {
-      this.monthlyInterestRatio = (this.emiForm.value.interest / 100) / 12;
-      this.top = Math.pow((1 + this.monthlyInterestRatio), this.emiForm.value.tenure*12);
-      this.bottom = this.top - 1;
-      this.sp = this.top / this.bottom;
-      this.emi = ((this.emiForm.value.principal * this.monthlyInterestRatio) * this.sp);
-      this.full = this.emiForm.value.tenure*12 * this.emi;
-      this.interestt = this.full - this.emiForm.value.principal;
-    }
+    // update() {
+    //   this.monthlyInterestRatio = (this.emiForm.value.interest / 100) / 12;
+    //   this.top = Math.pow((1 + this.monthlyInterestRatio), this.emiForm.value.tenure*12);
+    //   this.bottom = this.top - 1;
+    //   this.sp = this.top / this.bottom;
+    //   this.emi = ((this.emiForm.value.principal * this.monthlyInterestRatio) * this.sp);
+    //   this.full = this.emiForm.value.tenure*12 * this.emi;
+    //   this.interestt = this.full - this.emiForm.value.principal;
+    // }
   
   
     panNumber: string;
