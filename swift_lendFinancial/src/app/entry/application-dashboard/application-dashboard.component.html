@@ -1,1 +1,10 @@
-<p>application-dashboard works!</p>
+<app-home-header (getUserType)="userType"></app-home-header>
+<div class="frame">
+    <div class="menu">
+        <app-menu></app-menu>
+    </div>
+    <div>
+        <h1>Our Nevigated Component Will display here</h1>
+    <router-outlet></router-outlet>
+   </div>
+</div>
