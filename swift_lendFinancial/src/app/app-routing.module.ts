@@ -29,8 +29,11 @@ const routes: Routes = [
     children:[
                {path:'admin' , loadChildren:()=>import('src/app/module/admin/admin.module').then(m=>m.AdminModule)},
                {path:'re' , loadChildren:()=>import('src/app/module/relationshi-exccutive/relationshi-exccutive.module').then(m=>m.RelationshiExccutiveModule)},
-              
+               {path:'oe',loadChildren:()=>import('src/app/module/operational-executive/operational-executive.module').then(m=>m.OperationalExecutiveModule)},
+              {path:'cm',loadChildren:()=>import('src/app/module/credit-manager/credit-manager-routing.module').then(m=>m.CreditManagerRoutingModule)},
+              {path:'am',loadChildren:()=>import('src/app/module/account-head/account-head.module').then(m=>m.AccountHeadModule)}
              ]
+              
   }
 ];
 
