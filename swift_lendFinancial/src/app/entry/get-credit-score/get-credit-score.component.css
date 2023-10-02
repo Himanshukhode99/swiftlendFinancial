@@ -9,7 +9,6 @@ border-radius: 8px;
 color: #14212d;
 overflow: hidden;
 
-
 }
 
 .loan-calculator,
@@ -87,7 +86,6 @@ font-size: 18px;
 font-weight: 900;
 cursor: pointer;
 margin: 24px 0;
-
 }
 @media(max-width: 650px){
 .loan-calculator{
@@ -128,19 +126,10 @@ border: none;
 background-color: #dadada;
 }
 
-.group{
-    display: flex;
-    justify-content: center;
-}
-
 #inputBox{
+
     height: 20px;
-    width: 160px;
+    width: 200px;
 }
 
-.title{
-
-    text-align: center;
-    
-}
 

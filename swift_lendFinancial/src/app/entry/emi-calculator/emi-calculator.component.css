@@ -103,3 +103,21 @@
 {
     background: linear-gradient(to right, #413d40, #624f5c);
 }
+#Butx{
+
+    display: flex;
+    justify-content: right;
+}
+
+#Xbut{
+
+    margin: 0;
+    padding: 0;
+}
+#inputBox{
+
+    height: 20px;
+    width: 200px;
+
+    
+}
