@@ -17,9 +17,6 @@ import { EligibilityComponent } from './entry/eligibility/eligibility.component'
 import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
 import{ ReactiveFormsModule } from '@angular/forms';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
-import { DocumentVerificationComponent } from './module/operational-exexutive/document-verification/document-verification.component';
-import { CibilCheckComponent } from './module/operational-exexutive/cibil-check/cibil-check.component';
-import { RequestedEnquriesComponent } from './module/operational-exexutive/requested-enquries/requested-enquries.component';
 import { UserOptionPipe } from './pipe/user-option.pipe'
 
 @NgModule({
@@ -38,9 +35,7 @@ import { UserOptionPipe } from './pipe/user-option.pipe'
     EligibilityComponent,
     ApplyNowComponent,
     ApplicationDashboardComponent,
-    DocumentVerificationComponent,
-    CibilCheckComponent,
-    RequestedEnquriesComponent,
+    
     UserOptionPipe
   ],
   imports: [
