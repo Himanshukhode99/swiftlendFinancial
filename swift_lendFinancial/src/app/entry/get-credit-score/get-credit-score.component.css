@@ -2,12 +2,13 @@
 font-family: "Roboto", sans-serif;
 width: 900px;
 margin: 14px auto;
-margin-top: 120px;
+
 background: hwb(105 90% 9%);
 box-shadow: 0 12px 50px --11px rgba(0, 0, 0, 0.2);
 border-radius: 8px;
 color: #14212d;
 overflow: hidden;
+
 
 }
 
@@ -19,9 +20,10 @@ border-color: #aa141d;
 
 .loan-calculator .top{
 background:#dadada;
-color: rgb(170, 183, 190);
+color: #aa141d;
 padding: 32px;
 padding-left: 50px;
+
 }
 
 .loan-calculator .top h2{
@@ -85,6 +87,7 @@ font-size: 18px;
 font-weight: 900;
 cursor: pointer;
 margin: 24px 0;
+
 }
 @media(max-width: 650px){
 .loan-calculator{
@@ -104,3 +107,40 @@ margin: 24px 0;
 .body{
 background: linear-gradient(to right, #413d40, #624f5c);
 }
+
+.top{
+    margin-top: 0;
+    
+}
+
+#xBut{
+    display: flex;
+    justify-content: right;
+}
+
+#Xbut{
+
+   color: #aa141d;
+   font-size: 18px;
+font-weight: 900;
+cursor: pointer;
+border: none;
+background-color: #dadada;
+}
+
+.group{
+    display: flex;
+    justify-content: center;
+}
+
+#inputBox{
+    height: 20px;
+    width: 160px;
+}
+
+.title{
+
+    text-align: center;
+    
+}
+
