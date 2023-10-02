@@ -6,6 +6,7 @@ import { EnquiryComponent } from './entry/enquiry/enquiry.component';
 import { AboutUsComponent } from './entry/about-us/about-us.component';
 import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.component';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
+import { LoginComponent } from './entry/login/login.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
   {
     path:"calculator" ,component:EmiCalculatorComponent
   },
+  {path:"login", component:LoginComponent} , 
   {
     path:'application',component:ApplicationDashboardComponent,
     children:[
