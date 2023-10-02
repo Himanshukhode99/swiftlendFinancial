@@ -1,0 +1,88 @@
+#aboutus{
+
+    height: 200px;
+    width: 1000px;
+
+    margin: auto;
+    border-radius: 20px;
+    
+ }
+ #name{
+   
+    color: #aa141d;
+    text-align: center;
+    margin-top: 20PX;
+ }
+
+ #para{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20PX;
+    font-size: larger;
+    color: #aa141d;
+  
+ }
+ #OurCommitment{
+
+    height: 250px;
+    width: 1000px;
+    background-color:#aa141d ;
+    margin: auto;
+    border-radius: 20px;
+    
+ }
+ #nameO{
+   
+    color: white;
+    text-align: center;
+    
+ }
+ #paraa{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20PX;
+    font-size: larger;
+    color: white;
+  
+ }
+
+#box{
+    height: 400px;
+    width: 350px;
+    background-color: #dadada;
+    border: 1px solid #aa141d;
+    border-radius: 20px;
+    margin: 20px;
+    
+ }
+
+ #three{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ #two{
+    display: flex;
+    justify-content: center;
+ }
+
+ #img{
+    margin-top: 10px;
+  
+    height: 100px;
+    width: auto;
+ }
+ #heading
+ {
+    display: flex;
+    justify-content: center;
+ }
+
+ #Boxpara{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+ 
+    font-size: larger;
+    color: #aa141d;
+  
+ }
