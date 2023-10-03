@@ -7,6 +7,7 @@ import { AboutUsComponent } from './entry/about-us/about-us.component';
 import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.component';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
 import { LoginComponent } from './entry/login/login.component';
+import { EligibilityComponent } from './entry/eligibility/eligibility.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
     path:"calculator" ,component:EmiCalculatorComponent
   },
   {path:"login", component:LoginComponent} , 
+  {path:"eligibility", component : EligibilityComponent},
   {
     path:'application',component:ApplicationDashboardComponent,
     children:[
