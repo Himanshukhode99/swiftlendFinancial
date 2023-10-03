@@ -19,6 +19,7 @@ import{ ReactiveFormsModule } from '@angular/forms';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
 import { UserOptionPipe } from './pipe/user-option.pipe';
 import { MainTempleteComponent } from './templates/main-templete/main-templete.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MainTempleteComponent } from './templates/main-templete/main-templete.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

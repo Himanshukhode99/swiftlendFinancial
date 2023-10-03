@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonService } from 'src/app/Shared/common.service';
 
 @Component({
   selector: 'app-enquiry',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./enquiry.component.css']
 })
 export class EnquiryComponent {
-  constructor(private fb:FormBuilder,private router:Router){}
+  constructor(private fb:FormBuilder,private router:Router , public cs:CommonService){}
 
   enquiry:FormGroup;
   
@@ -20,14 +21,28 @@ export class EnquiryComponent {
       age:[],
       mob:[],
       address:[],
-      pan:[]
+      pan:[],
+      cibil:[]
      
       
   })
 }
   save(){
     alert("ThankYou For Enquiry");
+
+    this.cs.saveEnquiry(this.enquiry.value).subscribe();
+
+
+
+
+    console.log(this.enquiry.value)
     this.router.navigateByUrl("")
+
+    
+
+    
+
+
   }
 
 
