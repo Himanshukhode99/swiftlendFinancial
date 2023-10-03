@@ -9,11 +9,11 @@ export class UserOptionPipe implements PipeTransform {
 
     if(value=='admin')
     {
-      return "admin login..!"
+      return "ADMIN"
     }
     else if(value=='re')
     {
-      return "relationship Execetive..!"
+      return "Relationship Execetive..!"
     }
     else if(value=='oe')
     {

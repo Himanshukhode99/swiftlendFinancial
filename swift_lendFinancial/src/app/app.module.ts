@@ -17,7 +17,8 @@ import { EligibilityComponent } from './entry/eligibility/eligibility.component'
 import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
 import{ ReactiveFormsModule } from '@angular/forms';
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
-import { UserOptionPipe } from './pipe/user-option.pipe'
+import { UserOptionPipe } from './pipe/user-option.pipe';
+import { MainTempleteComponent } from './templates/main-templete/main-templete.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { UserOptionPipe } from './pipe/user-option.pipe'
     ApplyNowComponent,
     ApplicationDashboardComponent,
     
-    UserOptionPipe
+    UserOptionPipe,
+          MainTempleteComponent
   ],
   imports: [
     BrowserModule,

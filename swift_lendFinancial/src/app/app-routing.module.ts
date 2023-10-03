@@ -8,26 +8,33 @@ import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.co
 import { ApplicationDashboardComponent } from './entry/application-dashboard/application-dashboard.component';
 import { LoginComponent } from './entry/login/login.component';
 import { EligibilityComponent } from './entry/eligibility/eligibility.component';
+import { MainTempleteComponent } from './templates/main-templete/main-templete.component';
 
 const routes: Routes = [
-  {
-    path:"", component:HomeDashboardComponent
-  },
-  {
-    path:"creditscore" , component:GetCreditScoreComponent
-  },
-  {
 
-    path:"enquiry" , component:EnquiryComponent
-  },
-  {
-    path:'aboutus',component:AboutUsComponent
-  },
-  {
-    path:"calculator" ,component:EmiCalculatorComponent
-  },
-  {path:"login", component:LoginComponent} , 
-  {path:"eligibility", component : EligibilityComponent},
+  {path:"" , component:MainTempleteComponent,children:[
+
+    {
+      path:"", component:HomeDashboardComponent
+    },
+    {
+      path:"creditscore" , component:GetCreditScoreComponent
+    },
+    {
+  
+      path:"enquiry" , component:EnquiryComponent
+    },
+    {
+      path:'aboutus',component:AboutUsComponent
+    },
+    {
+      path:"calculator" ,component:EmiCalculatorComponent
+    },
+    {path:"login", component:LoginComponent} , 
+    {path:"eligibility", component : EligibilityComponent},
+
+  ]
+},
   {
     path:'application',component:ApplicationDashboardComponent,
     children:[

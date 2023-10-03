@@ -6,20 +6,22 @@ export class UserTypeOption
           {
             admin:[
               {label:'add employeee' ,path:'addemp'},
-              {label:'app static' ,path:'appstatic'},
-              {label:'manage employee' ,path:'mangemp'}
+              {label:'manage employee' ,path:'manageemp'},
+              {label:'app static' ,path:'static'}
+              
 
             ],
             re: [
                   {label:'Add Enquiry' , path:'addenq'},
                   {label:'View Enquiry' , path :'viewenq'},
-                  {label:'view accept Loan', path:'acceptloan'},
-                  {lable:'feedback' ,path:'feedback'}
+                  {label:'view accept Loan', path:'viewloan'},
+                  {label:'feedback' ,path:'feedback'}
                 ],
             oe:[
+              {label:'requested enquries' , path :'requestinq'},
               {label:'Check cibil' , path:'check_cibil'},
-              {label:'Verify Documents' , path :'verify_doc'},
-              {label:'requested enquries' , path :'requestinq'}
+              {label:'Verify Documents' , path :'verify_doc'}
+              
          
               ],
               cm:[
