@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ApplicationDashboardComponent {
 
+  userType:string;
+  ngOnInit(): void {
+    this.userType=sessionStorage.getItem('type');
+  }
+
   
 
 }

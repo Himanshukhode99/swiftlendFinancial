@@ -1,0 +1,8 @@
+.frame{
+    display: flex;
+}
+.menu{
+    width: 200px;
+    background-color: #aa141d;
+    height: 900px;
+}
