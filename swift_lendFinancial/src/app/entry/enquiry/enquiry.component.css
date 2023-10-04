@@ -1,6 +1,6 @@
 .main{
    
-    height:420px;
+    height:75vh;
     width: 800px;
     background-color: #ecf0f3;
     border-radius: 20px;
@@ -39,7 +39,7 @@ font-size: 18px;
 font-weight: 900;
 cursor: pointer;
 margin: 24px 0;
-margin-left: 110px;
+margin-left: 260px;
 
 }
 

@@ -7,5 +7,6 @@ export class Enquiry {
     address:string
     pan:string
     cibil:number
+    aadhar:number
 
 }

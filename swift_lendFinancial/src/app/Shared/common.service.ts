@@ -15,7 +15,7 @@ export class CommonService {
   saveEnquiry(enquiry: Enquiry) {
     
     console.log(enquiry.cibil);
-    return this.http.post("savdjhsd",enquiry)
+    return this.http.post("http://localhost:9093/saveEnquiry",enquiry)
     
 
   }
