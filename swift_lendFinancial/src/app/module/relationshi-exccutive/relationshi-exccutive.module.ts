@@ -6,6 +6,7 @@ import { AddEnqueryComponent } from './add-enquery/add-enquery.component';
 import { ViewEnqueryComponent } from './view-enquery/view-enquery.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ViewAcceptLoanComponent } from './view-accept-loan/view-accept-loan.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ViewAcceptLoanComponent } from './view-accept-loan/view-accept-loan.com
   ],
   imports: [
     CommonModule,
-    RelationshiExccutiveRoutingModule
+    RelationshiExccutiveRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class RelationshiExccutiveModule { }

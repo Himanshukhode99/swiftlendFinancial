@@ -22,7 +22,7 @@ export class EnquiryComponent {
       mob:[],
       address:[],
       pan:[],
-      cibil:[]
+      
      
       
   })

@@ -1,1 +1,33 @@
-<p>add-enquery works!</p>
+<br><br>
+
+<div class="main">
+    <br>
+    <div> <img id="logo" src="assets\images\logo.png" alt=""></div>
+<div class="first">
+  
+   
+
+    <form class="container" [formGroup]="enquiry" (ngSubmit)="save()">
+    <div class="col-5">   
+         
+<input id="inpu" type="text" placeholder="Name" formControlName="name">
+<input id="inpu" type="email" placeholder="E-mail" formControlName="email">
+</div>
+<div>
+<input id="inpu" type="number" placeholder="Age" formControlName="age">
+<input id="inpu" type="text" placeholder="PAN" formControlName="pan">
+</div>
+<div>
+<input id="inpu" type="tel" placeholder="Contact Number" formControlName="mob">
+<input id="inpu" type="text" placeholder="Address" formControlName="address">
+</div>
+<div >
+  
+
+<button id="sub" type="submit"> Submit</button>
+</div>
+</form>
+</div>
+</div>
+
+<br><br>

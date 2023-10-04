@@ -6,6 +6,7 @@ export class Enquiry {
     mob:number
     address:string
     pan:string
-    cibil:number
+    
 
 }
+  
