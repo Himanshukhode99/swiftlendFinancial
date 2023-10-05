@@ -7,17 +7,19 @@ import { Enquiry } from '../model/enquiry';
   providedIn: 'root'
 })
 export class CommonService {
+  cust: Enquiry;
   
   
   constructor( public http: HttpClient) { }
 
 
-  saveEnquiry(enquiry: Enquiry) {
-    
-    
-    return this.http.post("savdjhsd",enquiry)
-    
-
-  }
+  saveEnquiry(enquiry: Enquiry)
+   {
+    return this.http.post("http://localhost:9093/saveEnquiry",enquiry);
+    }
+    getallEnquiry()
+    {
+      return this.http.get("http://localhost:9093/getEnquiries");
+    }
 
 }

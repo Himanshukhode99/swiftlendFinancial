@@ -1,0 +1,369 @@
+#main{
+
+    height: auto;
+    width: auto;
+    background-color: #dadada ;
+    justify-content: center;
+    display: flex;
+    border-radius: 20px;
+}
+
+#loc{
+    height: auto;
+    width: 50%;
+    background-color: white;
+    margin: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 20px;
+    transition: all .5s;
+
+   
+}
+
+#per{
+    height: 500px;
+    width: 50%;
+    background-color: #aa141d;
+    margin: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+    transition: all .5s;
+   
+}
+#heading{
+
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: larger;
+    color: #aa141d;
+}
+#heading2{
+
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    
+    color: white;
+}
+
+#fields{
+
+    margin-left: 30px;
+    
+   
+}
+
+#inpu{
+
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+
+    border: 1px solid #aa141d;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+
+}
+#butt{
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #aa141d;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #aa141d;
+    background-color: white;
+    transform: scale(1);
+    transition: all .5s;
+
+
+}
+
+#butt:hover{
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #aa141d;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #aa141d;
+    background-color: white;
+    transform: scale(1.2);
+    transition: all .5s;
+
+}
+#fieldsLoc{
+
+    margin-left: 30px;
+   
+}
+
+
+#per #fields #inpuSel{
+
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+
+    border: 1px solid #aa141d;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+
+}
+
+
+
+
+
+
+.custom-file-input {
+    color: transparent;
+  }
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input1::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input2::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input3::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input4::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input5::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input6::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input7::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input8::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input9::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input10::before {
+    content: 'Select Aadhar Card';
+    color: gray;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 20px;
+    width: 200px;
+   
+    height: 25px;
+    text-align: center;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active {
+    outline: 0;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+  
+  body {
+    padding: 20px;
+  }
+
+  #fieldsInpu{
+
+    justify-content: center;
+    display: flex;
+  }
+
+  #innnpppp{
+    justify-content: center;
+    display: flex;
+  }

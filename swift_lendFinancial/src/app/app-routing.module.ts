@@ -9,6 +9,7 @@ import { ApplicationDashboardComponent } from './entry/application-dashboard/app
 import { LoginComponent } from './entry/login/login.component';
 import { EligibilityComponent } from './entry/eligibility/eligibility.component';
 import { MainTempleteComponent } from './templates/main-templete/main-templete.component';
+import { ApplyNowComponent } from './entry/apply-now/apply-now.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,7 @@ const routes: Routes = [
     },
     {path:"login", component:LoginComponent} , 
     {path:"eligibility", component : EligibilityComponent},
+    {path:"apply", component: ApplyNowComponent}
 
   ]
 },

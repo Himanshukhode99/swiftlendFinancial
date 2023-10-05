@@ -6,10 +6,11 @@ import { ViewAcceptLoanComponent } from './view-accept-loan/view-accept-loan.com
 import { FeedbackComponent } from './feedback/feedback.component';
 
 const routes: Routes = [
-  {path:'addenq',component:AddEnqueryComponent},
-  {path:'viewenq',component:ViewEnqueryComponent},
-  {path:'viewloan',component:ViewAcceptLoanComponent},
-  {path:'feedback',component:FeedbackComponent}
+  {path:'addenq',   component:AddEnqueryComponent},
+  {path:'viewenq',  component:ViewEnqueryComponent},
+  {path:'feedback', component:FeedbackComponent},
+  {path:'viewloan', component:ViewAcceptLoanComponent}
+ 
 ];
 
 @NgModule({

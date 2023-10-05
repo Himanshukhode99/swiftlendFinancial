@@ -37,7 +37,7 @@ export class AddEnqueryComponent {
 
 
     console.log(this.enquiry.value)
-    this.router.navigateByUrl("")
+    window.location.reload();
 
     
 
