@@ -1,21 +1,15 @@
-<!-- <app-app-header [getUserType]="userType"></app-app-header>
-<div class="frame">
-    <div class="menu">
-        <app-menu></app-menu>
-    </div>
-    <div>
-        <h1>Our Nevigated Component Will display here</h1>
-    <router-outlet></router-outlet>
-   </div>
-</div> -->
+
 
 <app-app-header [getuseroption]="userType"></app-app-header>
 <div class="frame">
     <div class="menu">
         <app-menu></app-menu>
     </div>
-    <div>
+    <div id="content">
+
+        <div>
         <router-outlet></router-outlet>
+        </div>
     </div>
 
  
