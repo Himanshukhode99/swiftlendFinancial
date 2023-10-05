@@ -155,7 +155,7 @@
     text-align: center;
   }
   .custom-file-input2::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Pan Card';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -176,7 +176,7 @@
     text-align: center;
   }
   .custom-file-input3::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Profile Pohto';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -197,7 +197,7 @@
     text-align: center;
   }
   .custom-file-input4::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Signature';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -218,7 +218,7 @@
     text-align: center;
   }
   .custom-file-input5::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Salary Slip';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -239,7 +239,7 @@
     text-align: center;
   }
   .custom-file-input6::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Driving License';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -260,7 +260,7 @@
     text-align: center;
   }
   .custom-file-input7::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Bank Statement';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -281,7 +281,7 @@
     text-align: center;
   }
   .custom-file-input8::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Car Quatation';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -302,7 +302,7 @@
     text-align: center;
   }
   .custom-file-input9::before {
-    content: 'Select Aadhar Card';
+    content: 'Select Form16';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -323,7 +323,7 @@
     text-align: center;
   }
   .custom-file-input10::before {
-    content: 'Select Aadhar Card';
+    content: 'Select ITR ';
     color: gray;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);

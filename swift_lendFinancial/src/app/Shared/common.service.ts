@@ -15,11 +15,11 @@ export class CommonService {
 
   saveEnquiry(enquiry: Enquiry)
    {
-    return this.http.post("http://localhost:9093/saveEnquiry",enquiry);
+    return this.http.post("http://localhost:9093/Swift_Lend_Financial/saveEnquiry",enquiry);
     }
     getallEnquiry()
     {
-      return this.http.get("http://localhost:9093/getEnquiries");
+      return this.http.get("http://localhost:9093/Swift_Lend_Financial/getEnquiries");
     }
 
 }
