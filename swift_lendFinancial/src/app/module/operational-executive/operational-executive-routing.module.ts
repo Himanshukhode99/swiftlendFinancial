@@ -6,8 +6,11 @@ import { CibilCheckComponent } from './cibil-check/cibil-check.component';
 
 const routes: Routes = [
   {path:'requestinq',component:RequestedEnquiriesComponent},
-  {path:'documentverfy',component:DocumentVerificationComponent},
-  {path:'cibilecheck',component:CibilCheckComponent}
+  {path:'verify_doc',component:DocumentVerificationComponent},
+  {path:'check_cibil',component:CibilCheckComponent},
+  {path:'check_cibil/:id',component:CibilCheckComponent}
+
+
 ];
 
 @NgModule({

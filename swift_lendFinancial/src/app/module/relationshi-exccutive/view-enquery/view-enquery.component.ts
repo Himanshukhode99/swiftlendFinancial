@@ -12,18 +12,29 @@ export class ViewEnqueryComponent {
 
   constructor(public cs:CommonService,public fb:FormBuilder){}
   cust:Enquiry[];
-  enq:Enquiry[];
+  enq:Enquiry[]=[];
  
   ngOnInit()
   {
     this.cs.getallEnquiry().subscribe((enquery:Enquiry[])=>{
     
-      this.enq=enquery;
+      enquery.forEach(val=>{
+        if(val.enquiryStatus=="null")
+        {
+          this.enq.push(val);
+        }
+      })
+      // this.enq=enquery;
     })
   }
   
   cibil(c:Enquiry) {
-   this.cs.cust=Object.assign({},c);
+
+    c.enquiryStatus="send to check cibil";
+    console.warn(c);
+  
+    this.cs.saveEnquiry(c).subscribe();
+    window.location.reload();
     }
 
 }

@@ -7,7 +7,8 @@ export class Enquiry {
     mob:number
     address:string
     pan:string
-    
-
+    cibilscore:number
+    cibilstatus:string
+    enquiryStatus:string
 }
   

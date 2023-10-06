@@ -5,7 +5,7 @@ import { OperationalExecutiveRoutingModule } from './operational-executive-routi
 import { RequestedEnquiriesComponent } from './requested-enquiries/requested-enquiries.component';
 import { DocumentVerificationComponent } from './document-verification/document-verification.component';
 import { CibilCheckComponent } from './cibil-check/cibil-check.component';
-
+import{ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { CibilCheckComponent } from './cibil-check/cibil-check.component';
   ],
   imports: [
     CommonModule,
-    OperationalExecutiveRoutingModule
+    OperationalExecutiveRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class OperationalExecutiveModule { }

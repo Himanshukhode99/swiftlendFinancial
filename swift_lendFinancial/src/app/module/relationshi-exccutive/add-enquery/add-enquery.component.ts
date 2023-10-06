@@ -23,26 +23,21 @@ export class AddEnqueryComponent {
       mob:[],
       address:[],
       pan:[],
+      aadhar:[]
     
      
       
   })
 }
   save(){
-    alert("ThankYou For Enquiry");
 
+   
+      alert("ThankYou For Enquiry");
+      this.enquiry.value.enquiryStatus="null";
+      console.warn(this.enquiry.value);
     this.cs.saveEnquiry(this.enquiry.value).subscribe();
-
-
-
-
-    console.log(this.enquiry.value)
-    window.location.reload();
-
-    
-
-    
-
+  
+    // window.location.reload();
 
   }
 
