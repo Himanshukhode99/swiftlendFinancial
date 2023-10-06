@@ -14,7 +14,8 @@ export class CibilCheckComponent {
 
   constructor(private route:Router, private fb:FormBuilder,
     private activatedroute:ActivatedRoute,
-    private cs:CommonService){
+    private cs:CommonService)
+    {
 
   }
   
