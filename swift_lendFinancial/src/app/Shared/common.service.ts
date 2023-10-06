@@ -7,6 +7,7 @@ import { Enquiry } from '../model/enquiry';
   providedIn: 'root'
 })
 export class CommonService {
+ 
   cust: Enquiry;
   
   
@@ -21,5 +22,13 @@ export class CommonService {
     {
       return this.http.get("http://localhost:9093/Swift_Lend_Financial/getEnquiries");
     }
+
+
+    saveLoanApplication(FormData: any) {
+   
+      return this.http.post("http://localhost:9093/Swift_Lend_Financial/saveCustomer",FormData);
+    }
+
+
 
 }
