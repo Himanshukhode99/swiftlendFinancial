@@ -9,9 +9,10 @@ export class Customer
     gender:string;
     mobile:number;
     email:string;
-    aahar:number;
-    pancard:number;
-    maritalStatus:string;
+    user:any;
+    localAddress: l
+    
+    
 
 
 }

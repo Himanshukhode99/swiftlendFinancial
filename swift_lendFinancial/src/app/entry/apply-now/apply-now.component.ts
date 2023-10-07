@@ -9,7 +9,7 @@ import { CommonService } from 'src/app/Shared/common.service';
   styleUrls: ['./apply-now.component.css']
 })
 export class ApplyNowComponent {
-PersonalDetails: FormGroup<any>;
+  personaldetails: FormGroup<any>;
 
 
   constructor(public fb:FormBuilder, public cs:CommonService , public router:Router){}
@@ -44,7 +44,7 @@ PersonalDetails: FormGroup<any>;
 
   ngOnInit(){
 
-    this.PersonalDetails=this.fb.group({
+    this.personaldetails=this.fb.group({
       first_name:[],
       middle_name:[],
       last_name:[],
@@ -205,7 +205,7 @@ PersonalDetails: FormGroup<any>;
 
   
 
-num:number = 4
+num:number = 0
   saveLocal(){
 
 
@@ -222,7 +222,7 @@ num:number = 4
       this.router.navigateByUrl("/")
     } 
   
-console.log(this.PersonalDetails.value)
+console.log(this.personaldetails.value)
 
   }
   back(){
@@ -235,11 +235,11 @@ console.log(this.PersonalDetails.value)
 
 get localAddress():any
 {
-  return this.PersonalDetails.controls['localAddressddress'].value;
+  return this.personaldetails.controls['localAddressddress'].value;
 }
   sameAs(){
    
-    this.PersonalDetails.controls['permenantAddress'].patchValue(
+    this.personaldetails.controls['permenantAddress'].patchValue(
       {
       house_number: this.localAddress.house_number,
       landmark: this.localAddress.landmark,
@@ -261,7 +261,7 @@ get localAddress():any
 
   
 let formdata=new FormData;
-let personalDetails:any=JSON.stringify(this.PersonalDetails.value);
+let personalDetails:any=JSON.stringify(this.personaldetails.value);
 // let localAddress:any=JSON.stringify(this.localAddress.value);
 // let permenantAddress:any=JSON.stringify(this.permenantAddress.value);
 // let BankDetails:any=JSON.stringify(this.BankDetails.value);

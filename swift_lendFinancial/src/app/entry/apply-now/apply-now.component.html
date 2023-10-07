@@ -5,7 +5,7 @@
 
     <!-- Personal Details -->
   
-    <form [formGroup]="PersonalDetails" (ngSubmit)="FinalDoc()" style="justify-content: center; display: flex;" >
+    <form [formGroup]="personaldetails" (ngSubmit)="FinalDoc()" style="justify-content: center; display: flex;" >
     <div id="loc" *ngIf="num == 0"  >
   
       <div id="heading">
@@ -34,25 +34,25 @@
   
       <input id="inpu" type="number" placeholder="MobileNumber" formControlName="mobile">
       <input id="inpu" type="text" placeholder="Email " formControlName="email">
-      <input id="inpu" type="number" placeholder="Aadhar Number" formControlName="aahar">
-      <input id="inpu" type="number" placeholder="PAN Number" formControlName="pancard">
-      <select id="inpu" style="color: gray; "  name="Account Type" formControlName="maritalStatus">
+      <!-- <input id="inpu" type="number" placeholder="Aadhar Number" formControlName="aahar">
+      <input id="inpu" type="number" placeholder="PAN Number" formControlName="pancard"> -->
+      <!-- <select id="inpu" style="color: gray; "  name="Account Type" formControlName="maritalStatus">
         <option style="color: gray;"  value="">Marital Status</option>
-        <option  value="">Married</option>
-        <option  value="">Unmarried</option>
-        <option  value="">Divorsed</option>
+        <option  value="Married">Married</option>
+        <option  value="Unmarried">Unmarried</option>
+        <option  value="Divorsed">Divorsed</option>
       </select>
-  
+   -->
       
     
       
+   <button id="butt" style="align-self: center;"  (click)="saveLocal()">Next</button>
       
+  
       
         </div>
   
-        <button id="butt" style="align-self: center;"  (click)="saveLocal()">Next</button>
       
-  
      
   
     </div>
