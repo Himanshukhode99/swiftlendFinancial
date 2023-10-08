@@ -54,6 +54,7 @@ export class ApplyNowComponent {
       gender:[],
       mobile:[],
       email:[],
+      
 
     localAddress: this.fb.group({
         house_number: [],
@@ -83,21 +84,22 @@ export class ApplyNowComponent {
     }),
 
   
-    // bankDetails:this.fb.group({
-    //   accountNo:[],
-    //   AcholderName:[],
-    //   bankName:[],
-    //   bankBranchName:[],
-    //   bankifsccode:[],
-    //   accounttype:[]
+    bankDetails:this.fb.group({
+      accountNo:[],
+      acholdername:[],
+      bankName:[],
+      bankBranchName:[],
+      bankifsccode:[],
+      accounttype:[]
 
 
 
 
 
-    // }),
+    }),
 
     documents:this.fb.group({
+
 
       aadharcard:[],
       pancard:[],
@@ -129,6 +131,87 @@ export class ApplyNowComponent {
    
 
 
+
+  }
+
+
+
+  
+
+num:number = 0
+  saveLocal(){
+
+
+    this.num =this.num+1
+    
+    
+    console.log(this.num)
+
+   
+    if(this.num==5)
+    {
+      this.FinalDoc();
+
+      this.router.navigateByUrl("/")
+    } 
+  
+console.log(this.personaldetails.value)
+
+  }
+  back(){
+
+    if(this.num>0)
+{
+    this.num= this.num- 1
+}
+  }
+
+get localAddress():any
+{
+  return this.personaldetails.controls['localAddress'].value;
+}
+ 
+
+
+
+  FinalDoc(){
+
+  
+
+let personalDetails:any=JSON.stringify(this.personaldetails.value);
+let formdata=new FormData;
+// let localAddress:any=JSON.stringify(this.localAddress.value);
+// let permenantAddress:any=JSON.stringify(this.permenantAddress.value);
+// let BankDetails:any=JSON.stringify(this.BankDetails.value);
+
+
+formdata.append("personaldetails", personalDetails);
+// formdata.append("localAddress", localAddress);
+// formdata.append("permenantAddress", permenantAddress);
+// formdata.append("BankDetails", BankDetails);
+formdata.append('aadharcard',this.aadharcard);
+formdata.append('pancard',this.pancard);
+formdata.append('profile_photo',this.profile_photo);
+formdata.append('signature',this.signature);
+formdata.append('salary_slip',this.salary_slip);
+formdata.append('driving_license',this.driving_license);
+formdata.append('bank_statement',this.bank_statement);
+formdata.append('car_quatation',this.car_quatation);
+formdata.append('form16',this.form16);
+formdata.append('income_tax_return',this.income_tax_return);
+
+
+
+
+
+
+this.cs.saveLoanApplication(formdata).subscribe();
+
+
+
+
+
+alert("zal re baaa")
 
   }
 
@@ -197,82 +280,6 @@ export class ApplyNowComponent {
         this.income_tax_return =event.target.files[0];
         this.itr.nativeElement.className="file_bg_color"
       }
-
-  
-
-num:number = 0
-  saveLocal(){
-
-
-    this.num =this.num+1
-    
-    
-    console.log(this.num)
-
-   
-    if(this.num==4)
-    {
-      this.FinalDoc();
-
-      this.router.navigateByUrl("/")
-    } 
-  
-console.log(this.personaldetails.value)
-
-  }
-  back(){
-
-    if(this.num>0)
-{
-    this.num= this.num- 1
-}
-  }
-
-get localAddress():any
-{
-  return this.personaldetails.controls['localAddress'].value;
-}
- 
-
-
-
-  FinalDoc(){
-
-  
-let formdata=new FormData;
-let personalDetails:any=JSON.stringify(this.personaldetails.value);
-// let localAddress:any=JSON.stringify(this.localAddress.value);
-// let permenantAddress:any=JSON.stringify(this.permenantAddress.value);
-// let BankDetails:any=JSON.stringify(this.BankDetails.value);
-
-
-formdata.append("personaldetails", personalDetails);
-// formdata.append("localAddress", localAddress);
-// formdata.append("permenantAddress", permenantAddress);
-// formdata.append("BankDetails", BankDetails);
-formdata.append('aadharcard',this.aadharcard);
-formdata.append('pancard',this.pancard);
-formdata.append('profile_photo',this.profile_photo);
-formdata.append('signature',this.signature);
-formdata.append('salary_slip',this.salary_slip);
-formdata.append('driving_license',this.driving_license);
-formdata.append('bank_statement',this.bank_statement);
-formdata.append('car_quatation',this.car_quatation);
-formdata.append('form16',this.form16);
-formdata.append('income_tax_return',this.income_tax_return);
-
-
-
-
-this.cs.saveLoanApplication(formdata).subscribe();
-
-
-
-alert("zal re baaa")
-
-  }
-
-
 
 
 

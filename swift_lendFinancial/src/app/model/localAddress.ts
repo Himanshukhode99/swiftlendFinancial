@@ -1,5 +1,6 @@
 export class localAddress 
 {
+    localAddressId:number;
     house_number:number;
     landmark:string;
     street_name:string;

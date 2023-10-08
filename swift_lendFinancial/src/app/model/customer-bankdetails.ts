@@ -1,9 +1,10 @@
 export class CustomerBankdetails 
 {
-    AcholderName:string;
     accountNo:number;
+    // Acholdername:string;
+   
     bankName:string;
-    bankifsccode:number;
     bankBranchName:string;
+    bankifsccode:number;
     accounttype:string;
 }

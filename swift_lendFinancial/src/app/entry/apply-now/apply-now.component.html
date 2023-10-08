@@ -46,7 +46,7 @@
       
     
       
-   <button id="butt" style="align-self: center;"  (click)="saveLocal()">Next</button>
+   <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
       
   
       
@@ -137,7 +137,7 @@
       <input id="inpu" type="text" placeholder="Country" formControlName="country">
       <input id="inpu" type="number" placeholder="Pin Code" formControlName="pin_code">
       <button id="butt" (click)="back()" >Back</button>
-        <button id="butt" (click)="saveLocal()">Next</button>
+        <button id="butt"  (click)="saveLocal()">Next</button>
        
           </div>
       
@@ -160,7 +160,7 @@
   
     <!-- Bank Details -->
   
-    <!-- <div id="per"  *ngIf="num == 3"  formGroupName="bankDetails">
+    <div id="per"  *ngIf="num == 3"  formGroupName="bankDetails">
   
       <div id="heading2">
         <h3>Bank Details</h3>
@@ -171,11 +171,13 @@
     
         
         <div>
-          <input id="inpu"  type="text" placeholder="Account Holder Name" formControlName="AcholderName" >
-        <input id="inpu" type="text" placeholder="Bank Account Number" formControlName="accountNo">
+
+          <input id="inpu" type="number" placeholder="Bank Account Number" formControlName="accountNo">
+          <input id="inpu"  type="text" placeholder="Account Holder Name" formControlName="acholdername" >
+       
         <input id="inpu"  type="text" placeholder="Bank Name" formControlName="bankName">
       
-        <input id="inpu" type="text" placeholder="IFSC code" formControlName="bankifsccode">
+        <input id="inpu" type="number" placeholder="IFSC code" formControlName="bankifsccode">
         <input id="inpu"  type="text" placeholder="Branch Name" formControlName="bankBranchName">
       
       
@@ -188,19 +190,19 @@
         
        
         <button id="butt" (click)="back()" >Back</button>
-        <button id="butt" (click)="saveLocal()">Save & Next</button>
+        <button id="butt"  (click)="saveLocal()">Save & Next</button>
           </div>
     
       </div>
     
   
-    </div> -->
+    </div>
   
   
   
   
   
-    <div id="perDoc"  *ngIf="num == 3" formGroupName="documents" >
+    <div id="perDoc"  *ngIf="num == 4" formGroupName="documents" >
   
       <div id="heading2">
         <h3>Document Upload</h3>
@@ -245,7 +247,7 @@
       
         
         <button id="butt" type="submit">Save</button>
-        <button id="butt" (click)="back()" >Back</button>
+        <button id="butt"  (click)="back()" >Back</button>
           </div>
 
       </div>

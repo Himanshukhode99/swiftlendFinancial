@@ -1,6 +1,6 @@
 export class CustomerDocument 
 {
-    documentid:number;
+    documentId:number;
 
     aadharcard:any[];
 
