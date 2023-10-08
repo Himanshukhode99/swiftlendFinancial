@@ -1,4 +1,4 @@
-export class CustomerAddressetails 
+export class localAddress 
 {
     house_number:number;
     landmark:string;

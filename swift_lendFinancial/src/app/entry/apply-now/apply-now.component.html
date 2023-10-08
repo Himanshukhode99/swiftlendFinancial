@@ -1,4 +1,4 @@
-<div id="main">
+ <div id="main">
 
 
 
@@ -66,7 +66,7 @@
   
      <!-- Local Address -->
   
-    <div id="loc" *ngIf="num == 1"  formGroupName="localAddressddress">
+    <div id="loc" *ngIf="num == 1"  formGroupName="localAddress">
   
       <div id="heading">
       <h3>Local Address</h3>
@@ -116,7 +116,7 @@
 
       <div id="heading2">
         <h3>Permenant Address</h3>
-        <button (click)="sameAs()">Same As Local</button>
+        <button type="button" (click)="sameAs()">Same As Local</button>
         
       </div>
     
@@ -160,7 +160,7 @@
   
     <!-- Bank Details -->
   
-    <div id="per"  *ngIf="num == 3"  formGroupName="BankDetails">
+    <!-- <div id="per"  *ngIf="num == 3"  formGroupName="bankDetails">
   
       <div id="heading2">
         <h3>Bank Details</h3>
@@ -181,25 +181,26 @@
       
         <select id="inpu" style="color: gray; border: none;"  name="Account Type" formControlName="accounttype">
           <option style="color: gray;"  value="">ACCOUNT TYPE</option>
-          <option  value="">Current</option>
-          <option  value="">Saving</option>
+          <option  value="Current">Current</option>
+          <option  value="Saving">Saving</option>
         </select>
       
         
-        <button id="butt" (click)="saveLocal()">Save & Next</button>
+       
         <button id="butt" (click)="back()" >Back</button>
+        <button id="butt" (click)="saveLocal()">Save & Next</button>
           </div>
     
       </div>
     
   
-    </div>
+    </div> -->
   
   
   
   
   
-    <div id="perDoc"  *ngIf="num == 4" formGroupName="documentsUpload" >
+    <div id="perDoc"  *ngIf="num == 3" formGroupName="documents" >
   
       <div id="heading2">
         <h3>Document Upload</h3>
@@ -259,4 +260,4 @@
   
   
   
-  </div>
+  </div> 

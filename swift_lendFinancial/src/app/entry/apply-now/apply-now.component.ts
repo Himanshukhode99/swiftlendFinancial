@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 import { CommonService } from 'src/app/Shared/common.service';
 
 @Component({
@@ -54,11 +54,8 @@ export class ApplyNowComponent {
       gender:[],
       mobile:[],
       email:[],
-      aahar:[],
-      pancard:[],
-      maritalStatus:[],
 
-    localAddressddress: this.fb.group({
+    localAddress: this.fb.group({
         house_number: [],
         landmark: [],
         street_name: [],
@@ -86,21 +83,21 @@ export class ApplyNowComponent {
     }),
 
   
-    BankDetails:this.fb.group({
-      AcholderName:[],
-      accountNo:[],
-      bankName:[],
-      bankifsccode:[],
-      bankBranchName:[],
-      accounttype:[]
+    // bankDetails:this.fb.group({
+    //   accountNo:[],
+    //   AcholderName:[],
+    //   bankName:[],
+    //   bankBranchName:[],
+    //   bankifsccode:[],
+    //   accounttype:[]
 
 
 
 
 
-    }),
+    // }),
 
-    documentsUpload:this.fb.group({
+    documents:this.fb.group({
 
       aadharcard:[],
       pancard:[],
@@ -149,11 +146,9 @@ export class ApplyNowComponent {
       onselectAddharCard(event:any){
         this.aadharcard =event.target.files[0];
         this.addhar.nativeElement.className="file_bg_color"
-        console.log(this.addhar)
 
-        this.reader.onloadend= (e)=>this.addharDoc=this.reader.result;
-        this.reader.readAsDataURL(this.aadharcard);
-        console.log(this.addharDoc)
+        
+      
       }
 
       onselectpanCard(event:any){
@@ -215,7 +210,7 @@ num:number = 0
     console.log(this.num)
 
    
-    if(this.num==5)
+    if(this.num==4)
     {
       this.FinalDoc();
 
@@ -235,25 +230,9 @@ console.log(this.personaldetails.value)
 
 get localAddress():any
 {
-  return this.personaldetails.controls['localAddressddress'].value;
+  return this.personaldetails.controls['localAddress'].value;
 }
-  sameAs(){
-   
-    this.personaldetails.controls['permenantAddress'].patchValue(
-      {
-      house_number: this.localAddress.house_number,
-      landmark: this.localAddress.landmark,
-      street_name:this.localAddress.street_name,
-      city_name: this.localAddress.city_name,
-      taluka: this.localAddress.taluka,
-      district: this.localAddress.district,
-      state: this.localAddress.state,
-      country: this.localAddress.country,
-      pin_code:this.localAddress.pin_code
-   
-    }
-)
-  }
+ 
 
 
 
@@ -267,7 +246,7 @@ let personalDetails:any=JSON.stringify(this.personaldetails.value);
 // let BankDetails:any=JSON.stringify(this.BankDetails.value);
 
 
-formdata.append("personalDetails", personalDetails);
+formdata.append("personaldetails", personalDetails);
 // formdata.append("localAddress", localAddress);
 // formdata.append("permenantAddress", permenantAddress);
 // formdata.append("BankDetails", BankDetails);
@@ -293,6 +272,36 @@ alert("zal re baaa")
 
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  sameAs(){
+   
+    this.personaldetails.controls['permenantAddress'].patchValue(
+      {
+      house_number: this.localAddress.house_number,
+      landmark: this.localAddress.landmark,
+      street_name:this.localAddress.street_name,
+      city_name: this.localAddress.city_name,
+      taluka: this.localAddress.taluka,
+      district: this.localAddress.district,
+      state: this.localAddress.state,
+      country: this.localAddress.country,
+      pin_code:this.localAddress.pin_code
+   
+    }
+)
+  }
 
 
 }

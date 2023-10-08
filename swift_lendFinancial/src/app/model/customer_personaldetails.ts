@@ -10,7 +10,13 @@ export class Customer
     mobile:number;
     email:string;
     user:any;
-    localAddress: l
+    localAddress: any;
+    permenantAddress:any;
+    // bankDetails:any;
+    documents:any
+
+
+
     
     
 
