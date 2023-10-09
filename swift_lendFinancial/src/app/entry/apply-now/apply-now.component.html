@@ -202,7 +202,7 @@
   
   
   
-    <div id="perDoc"  *ngIf="num == 4" formGroupName="documents" >
+    <div id="perDoc"  *ngIf="num == 4"  >
   
       <div id="heading2">
         <h3>Document Upload</h3>
@@ -217,29 +217,29 @@
   
           <div id="innnpppp">
             
-            <input type="file" #adhar class="custom-file-input1" id="cs1" formControlName="aadharcard" (change)="onselectAddharCard($event)">
-            <input type="file" #pan   class="custom-file-input2" formControlName="pancard"  (change)="onselectpanCard($event)">
+            <input type="file" #adhar class="custom-file-input1" id="cs1"  (change)="onselectAddharCard($event)">
+            <input type="file" #pan   class="custom-file-input2"  (change)="onselectpanCard($event)">
           
         </div>
         
         <div  id="innnpppp">
-          <input type="file" #profile class="custom-file-input3" formControlName="profile_photo"  (change)="onselectProfile($event)">
-          <input type="file" #sign class="custom-file-input4" formControlName="signature"  (change)="onselectsign($event)">
+          <input type="file" #profile class="custom-file-input3"   (change)="onselectProfile($event)">
+          <input type="file" #sign class="custom-file-input4"   (change)="onselectsign($event)">
         </div>
         
         <div  id="innnpppp">
-          <input type="file" #salarySlip class="custom-file-input5" formControlName="salary_slip"  (change)="onselectsalarySlip($event)">
-          <input type="file" #Dl class="custom-file-input6" formControlName="driving_license"  (change)="onselectDL($event)">
+          <input type="file" #salarySlip class="custom-file-input5"  (change)="onselectsalarySlip($event)">
+          <input type="file" #Dl class="custom-file-input6"   (change)="onselectDL($event)">
         </div>
        
         <div  id="innnpppp">
-          <input type="file" #BankStatement class="custom-file-input7" formControlName="bank_statement"  (change)="onselectBAnkSatement($event)">
-          <input type="file" #carQuatation class="custom-file-input8" formControlName="car_quatation"  (change)="onselectQuatation($event)">
+          <input type="file" #BankStatement class="custom-file-input7"  (change)="onselectBAnkSatement($event)">
+          <input type="file" #carQuatation class="custom-file-input8"   (change)="onselectQuatation($event)">
         </div>
         
         <div  id="innnpppp">
-          <input type="file" #fom16 class="custom-file-input9" formControlName="form16"  (change)="onselect16NO($event)">
-          <input type="file" #itr class="custom-file-input10" formControlName="income_tax_return"  (change)="onselectITR($event)">
+          <input type="file" #fom16 class="custom-file-input9"   (change)="onselect16NO($event)">
+          <input type="file" #itr class="custom-file-input10"   (change)="onselectITR($event)">
         </div>
         
   

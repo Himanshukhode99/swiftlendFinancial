@@ -98,22 +98,22 @@ export class ApplyNowComponent {
 
     }),
 
-    documents:this.fb.group({
+    // documents:this.fb.group({
 
 
-      aadharcard:[],
-      pancard:[],
-      profile_photo:[],
-      signature:[],
-      salary_slip:[],
-      driving_license:[],
-      bank_statement:[],
-      car_quatation:[],
-      form16:[],
-      income_tax_return:[]
+    //   aadharcard:[],
+    //   pancard:[],
+    //   profile_photo:[],
+    //   signature:[],
+    //   salary_slip:[],
+    //   driving_license:[],
+    //   bank_statement:[],
+    //   car_quatation:[],
+    //   form16:[],
+    //   income_tax_return:[]
 
 
-    })
+    // })
    
    
 
