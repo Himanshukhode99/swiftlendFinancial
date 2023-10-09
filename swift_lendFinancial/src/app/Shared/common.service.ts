@@ -7,7 +7,7 @@ import { Enquiry } from '../model/enquiry';
   providedIn: 'root'
 })
 export class CommonService {
-  
+ 
  
   cust: Enquiry;
   
@@ -35,8 +35,11 @@ export class CommonService {
     }
 
 
+    
+    
+
 
     employeeReg(formdata: FormData) {
-     return this.http.post("",formdata);
+     return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveemp",formdata);
     }
 }

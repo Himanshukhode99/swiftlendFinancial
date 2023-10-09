@@ -10,7 +10,7 @@ import { CommonService } from 'src/app/Shared/common.service';
 })
 export class AddEmployeeComponent {
 
-  PersonalDetails: FormGroup<any>;
+  personaldetails: FormGroup<any>;
 
 
   constructor(public fb:FormBuilder, public cs:CommonService , public router:Router){}
@@ -33,33 +33,22 @@ export class AddEmployeeComponent {
    panImg:any;
    profImg:any;
    signImg:any;
-   salaryS:any;
-   d:any
-   bank:any
-   carQu:any
-   for:any
-   it:any
-
+  
 
 
 
   ngOnInit(){
 
-    this.PersonalDetails=this.fb.group({
-      first_name:[],
-      middle_name:[],
-      last_name:[],
-      mother_name:[],
-      noOfdependent:[],
-      dob:[],
-      gender:[],
+    this.personaldetails=this.fb.group({
+      employeeName:[],
       mobile:[],
+      dob:[],
       email:[],
-      aahar:[],
-      pancard:[],
-      maritalStatus:[],
+      gender:[],
+      designation:[],
+      
 
-    localAddressddress: this.fb.group({
+    localAddress: this.fb.group({
         house_number: [],
         landmark: [],
         street_name: [],
@@ -87,36 +76,21 @@ export class AddEmployeeComponent {
     }),
 
   
-    BankDetails:this.fb.group({
-      AcholderName:[],
+    bankDetails:this.fb.group({
       accountNo:[],
+      acholdername:[],
       bankName:[],
-      bankifsccode:[],
       bankBranchName:[],
+      bankifsccode:[],
       accounttype:[]
 
 
 
 
 
-    }),
-
-    documentsUpload:this.fb.group({
-
-      aadharcard:[],
-      pancard:[],
-      profile_photo:[],
-      signature:[],
-      salary_slip:[],
-      driving_license:[],
-      bank_statement:[],
-      car_quatation:[],
-      form16:[],
-      income_tax_return:[]
-
-
     })
-   
+
+ 
    
 
     
@@ -136,25 +110,84 @@ export class AddEmployeeComponent {
 
   }
 
+
+
+  
+
+num:number = 0
+  saveLocal(){
+
+
+    this.num =this.num+1
+    
+    
+    console.log(this.num)
+
+   
+    if(this.num==5)
+    {
+      this.FinalDoc();
+
+      this.router.navigateByUrl("/")
+    } 
+  
+console.log(this.personaldetails.value)
+
+  }
+  back(){
+
+    if(this.num>0)
+{
+    this.num= this.num- 1
+}
+  }
+
+get localAddress():any
+{
+  return this.personaldetails.controls['localAddress'].value;
+}
+ 
+
+
+
+  FinalDoc(){
+
+  
+
+let personalDetails:any=JSON.stringify(this.personaldetails.value);
+let formdata=new FormData;
+
+
+
+formdata.append("personaldetails", personalDetails);
+formdata.append('aadharcard',this.aadharcard);
+formdata.append('pancard',this.pancard);
+formdata.append('profile_photo',this.profile_photo);
+formdata.append('signature',this.signature);
+
+
+this.cs.employeeReg(formdata).subscribe();
+
+
+
+
+
+alert("zal re baaa")
+
+  }
+
   aadharcard:any;
       pancard:any;
       profile_photo:any;
       signature:any;
-      salary_slip:any;
-      driving_license:any;
-      bank_statement:any;
-      car_quatation:any;
-      form16:any;
-      income_tax_return:any;
+     
 
       onselectAddharCard(event:any){
         this.aadharcard =event.target.files[0];
         this.addhar.nativeElement.className="file_bg_color"
-        console.log(this.addhar)
 
-        this.reader.onloadend= (e)=>this.addharDoc=this.reader.result;
-        this.reader.readAsDataURL(this.aadharcard);
-        console.log(this.addharDoc)
+        
+      
       }
 
       onselectpanCard(event:any){
@@ -179,68 +212,22 @@ export class AddEmployeeComponent {
         
       }
 
-      onselectsalarySlip(event:any){
-        this.salary_slip =event.target.files[0];
-        this.salarySlip.nativeElement.className="file_bg_color"
-      }
-      onselectDL(event:any){
-        this.driving_license =event.target.files[0];
-        this.Dl.nativeElement.className="file_bg_color"
-      }
-      onselectBAnkSatement(event:any){
-        this.bank_statement =event.target.files[0];
-        this.BankStatement.nativeElement.className="file_bg_color"
-      }
-      onselectQuatation(event:any){
-        this.car_quatation =event.target.files[0];
-        this.carQuatation.nativeElement.className="file_bg_color"
-      }
-      onselect16NO(event:any){
-        this.form16 =event.target.files[0];
-        this.fom16.nativeElement.className="file_bg_color"
-      }
-      onselectITR(event:any){
-        this.income_tax_return =event.target.files[0];
-        this.itr.nativeElement.className="file_bg_color"
-      }
-
-  
-
-num:number = 0
-  saveLocal(){
+     
 
 
-    this.num =this.num+1
-    
-    
-    console.log(this.num)
 
-   
-    if(this.num==5)
-    {
-      this.FinalDoc();
 
-      this.router.navigateByUrl("/")
-    } 
-  
-console.log(this.PersonalDetails.value)
 
-  }
-  back(){
 
-    if(this.num>0)
-{
-    this.num= this.num- 1
-}
-  }
 
-get localAddress():any
-{
-  return this.PersonalDetails.controls['localAddressddress'].value;
-}
+
+
+
+
+
   sameAs(){
    
-    this.PersonalDetails.controls['permenantAddress'].patchValue(
+    this.personaldetails.controls['permenantAddress'].patchValue(
       {
       house_number: this.localAddress.house_number,
       landmark: this.localAddress.landmark,
@@ -255,49 +242,6 @@ get localAddress():any
     }
 )
   }
-
-
-
-  FinalDoc(){
-
-  
-let formdata=new FormData;
-let personalDetails:any=JSON.stringify(this.PersonalDetails.value);
-// let localAddress:any=JSON.stringify(this.localAddress.value);
-// let permenantAddress:any=JSON.stringify(this.permenantAddress.value);
-// let BankDetails:any=JSON.stringify(this.BankDetails.value);
-
-
-formdata.append("personalDetails", personalDetails);
-// formdata.append("localAddress", localAddress);
-// formdata.append("permenantAddress", permenantAddress);
-// formdata.append("BankDetails", BankDetails);
-formdata.append('aadharcard',this.aadharcard);
-formdata.append('pancard',this.pancard);
-formdata.append('profile_photo',this.profile_photo);
-formdata.append('signature',this.signature);
-formdata.append('salary_slip',this.salary_slip);
-formdata.append('driving_license',this.driving_license);
-formdata.append('bank_statement',this.bank_statement);
-formdata.append('car_quatation',this.car_quatation);
-formdata.append('form16',this.form16);
-formdata.append('income_tax_return',this.income_tax_return);
-
-
-
-
-this.cs.employeeReg(formdata).subscribe();
-
-
-
-
-
-  }
-
-
-
-
-
 
 
 

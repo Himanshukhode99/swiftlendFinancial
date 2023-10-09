@@ -1,237 +1,257 @@
+<div id="main">
 
 
 
 
+  <!-- Personal Details -->
 
-    <!-- Personal Details -->
+  <form [formGroup]="personaldetails" (ngSubmit)="FinalDoc()" style="justify-content: center; display: flex;" >
+  <div id="loc" *ngIf="num == 0"  >
+
+    <div id="heading">
+    <h3>Personal Details</h3>
+  </div>
+
+  <div id="fields">
+
+    
+    <div>
+    <input id="inpu" type="text" placeholder="Full Name" formControlName="employeeName">
+   
+
+    <input id="inpu"  type="number" placeholder="Mobile-Number" formControlName="mobile">
+    <input id="inpu"  type="date" placeholder="Date Of Birth" formControlName="dob">
   
-    <form [formGroup]="PersonalDetails" (ngSubmit)="FinalDoc()" style="justify-content: center; display: flex;" >
-    <div id="loc" *ngIf="num == 0"  >
+    <input id="inpu" type="text" placeholder="Email " formControlName="email">
+    <select id="inpu" style="color: gray; "   formControlName="gender">
+      <option style="color: gray;"  value="">GENDER</option>
+      <option  value="Male">Male</option>
+      <option  value="Female">Female</option>
+      <option  value="Other">Other</option>
+    </select>
+
+    
+    <select id="inpu" style="color: gray; "   formControlName="designation">
+      <option style="color: gray;"  value="">Designation</option>
+      <option  value="RE">Relationship Executive</option>
+      <option  value="OE">Operational Executive</option>
+      <option  value="CM">Credit Manager </option>
+      <option  value="AH">Account Head</option>
+    </select>
+
+    
+    <!-- <input id="inpu" type="number" placeholder="Aadhar Number" formControlName="aahar">
+    <input id="inpu" type="number" placeholder="PAN Number" formControlName="pancard"> -->
+    <!-- <select id="inpu" style="color: gray; "  name="Account Type" formControlName="maritalStatus">
+      <option style="color: gray;"  value="">Marital Status</option>
+      <option  value="Married">Married</option>
+      <option  value="Unmarried">Unmarried</option>
+      <option  value="Divorsed">Divorsed</option>
+    </select>
+ -->
+    
   
-      <div id="heading">
-      <h3>Personal Details</h3>
+    
+ <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
+    
+
+    
+      </div>
+
+    
+   
+
+  </div>
+
+  </div>
+  
+
+
+
+
+
+   <!-- Local Address -->
+
+  <div id="loc" *ngIf="num == 1"  formGroupName="localAddress">
+
+    <div id="heading">
+    <h3>Local Address</h3>
+  </div>
+
+  <div id="fields">
+
+    
+    <div style="margin-bottom: 10px;">
+    <input id="inpu" type="number" placeholder="House Number" formControlName="house_number">
+    <input id="inpu"  type="text" placeholder="LandMark" formControlName="landmark">
+  
+    <input id="inpu" type="text" placeholder="Street Name" formControlName="street_name">
+    <input id="inpu"  type="text" placeholder="City Name" formControlName="city_name">
+  
+    <input id="inpu" type="text" placeholder="Taluka" formControlName="taluka">
+    <input id="inpu"  type="text" placeholder="District" formControlName="district">
+  
+    <input id="inpu" type="text" placeholder="State" formControlName="state">
+    <input id="inpu" type="text" placeholder="Country" formControlName="country">
+    <input id="inpu" type="number" placeholder="Pin Code" formControlName="pin_code">
+    
+    <button id="butt" (click)="back()" >Back</button>
+    <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
+    
+
+      </div>
+   
+
+      
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+   <!-- Permenant Address -->
+
+
+
+  <div id="per"  *ngIf="num == 2" formGroupName="permenantAddress">
+    
+
+    <div id="heading2">
+      <h3>Permenant Address</h3>
+      <button type="button" (click)="sameAs()">Same As Local</button>
+      
+    </div>
+  
+    <div id="fields">
+  
+     
+      <div>
+        <input id="inpu" type="number" placeholder="House Number" formControlName="house_number" >
+    <input id="inpu"  type="text" placeholder="LandMark" formControlName="landmark">
+  
+    <input id="inpu" type="text" placeholder="Street Name"formControlName="street_name">
+    <input id="inpu"  type="text" placeholder="City Name" formControlName="city_name">
+  
+    <input id="inpu" type="text" placeholder="Taluka" formControlName="taluka">
+    <input id="inpu"  type="text" placeholder="District" formControlName="district">
+  
+    <input id="inpu" type="text" placeholder="State" formControlName="state">
+    <input id="inpu" type="text" placeholder="Country" formControlName="country">
+    <input id="inpu" type="number" placeholder="Pin Code" formControlName="pin_code">
+    <button id="butt" (click)="back()" >Back</button>
+      <button id="butt"  (click)="saveLocal()">Next</button>
+     
+        </div>
+    
+    </div>
+    
+  
+
+  </div>
+
+
+
+   
+
+
+
+
+
+
+
+
+  <!-- Bank Details -->
+
+  <div id="per"  *ngIf="num == 3"  formGroupName="bankDetails">
+
+    <div id="heading2">
+      <h3>Bank Details</h3>
+      
     </div>
   
     <div id="fields">
   
       
       <div>
-        <input id="inpu" type="text" placeholder="Name" formControlName="employeeName">
+
+        <input id="inpu" type="number" placeholder="Bank Account Number" formControlName="accountNo">
+        <input id="inpu"  type="text" placeholder="Account Holder Name" formControlName="acholdername" >
+     
+      <input id="inpu"  type="text" placeholder="Bank Name" formControlName="bankName">
+    
+      <input id="inpu" type="number" placeholder="IFSC code" formControlName="bankifsccode">
+      <input id="inpu"  type="text" placeholder="Branch Name" formControlName="bankBranchName">
+    
+    
+      <select id="inpu" style="color: gray; border: none;"  name="Account Type" formControlName="accounttype">
+        <option style="color: gray;"  value="">ACCOUNT TYPE</option>
+        <option  value="Current">Current</option>
+        <option  value="Saving">Saving</option>
+      </select>
+    
+      
+     
+      <button id="butt" (click)="back()" >Back</button>
+      <button id="butt"  (click)="saveLocal()">Save & Next</button>
+        </div>
+  
+    </div>
+  
+
+  </div>
+
+
+
+
+
+  <div id="perDoc"  *ngIf="num == 4"  >
+
+    <div id="heading2">
+      <h3>Document Upload</h3>
+      
+    </div>
+  
+    <div id="fieldsInpu">
+  
+      
+      
+      <div>
+
+        <div id="innnpppp">
+          
+          <input type="file" #adhar class="custom-file-input1" id="cs1"  (change)="onselectAddharCard($event)">
+          <input type="file" #pan   class="custom-file-input2"  (change)="onselectpanCard($event)">
+        
+      </div>
+      
+      <div  id="innnpppp">
+        <input type="file" #profile class="custom-file-input3"   (change)="onselectProfile($event)">
+        <input type="file" #sign class="custom-file-input4"   (change)="onselectsign($event)">
+      </div>
+    
+      
+
+      
+    
+      
+      <button id="butt" type="submit">Save</button>
+      <button id="butt"  (click)="back()" >Back</button>
+        </div>
+
+    </div>
+  
+
+  </div>
+
  
-        <input id="inpu"  type="text" placeholder=" Mobile Number" formControlName="employeeMobileNumber">
-        
-      
-        
-        <input id="inpu" style="color: gray;"  type="date"  placeholder="Date Of Birth" formControlName="employeeDob">
-        <input id="inpu" type="text" placeholder="Email " formControlName="email">
-        <select id="inpu" style="color: gray; "   formControlName="employeegender">
-          <option style="color: gray;"  value="">GENDER</option>
-          <option  value="Male">Male</option>
-          <option  value="Female">Female</option>
-          <option  value="Other">Other</option>
-        </select>
-      
-      
-        <select  id="inpu"  style="color: gray; " >
-          <option    style="color: gray;">Designation</option>
-          <option   value="re">R.E</option>
-          <option  value="oe">O.E</option>
-          <option  value="cm">C.M</option>
-          <option  value="ah">A.H</option>
-        </select>
-      
-      
-        </div>
-  
-        <button id="butt"  (click)="saveLocal()">Next</button>
-      
-  
-     
-  
-    </div>
-  
-    </div>
-    
-  
-  
-  
-  
-  
-     <!-- Local Address -->
-  
-    <div id="loc" *ngIf="num == 1"  formGroupName="localAddressddress">
-  
-      <div id="heading">
-      <h3>Local Address</h3>
-    </div>
-  
-    <div id="fields">
-  
-      
-      <div style="margin-bottom: 10px;">
-      <input id="inpu" type="number" placeholder="House Number" formControlName="house_number">
-      <input id="inpu"  type="text" placeholder="LandMark" formControlName="landmark">
-    
-      <input id="inpu" type="text" placeholder="Street Name" formControlName="street_name">
-      <input id="inpu"  type="text" placeholder="City Name" formControlName="city_name">
-    
-      <input id="inpu" type="text" placeholder="Taluka" formControlName="taluka">
-      <input id="inpu"  type="text" placeholder="District" formControlName="district">
-    
-      <input id="inpu" type="text" placeholder="State" formControlName="state">
-      <input id="inpu" type="text" placeholder="Country" formControlName="country">
-      <input id="inpu" type="number" placeholder="Pin Code" formControlName="pin_code">
-      
-      <button id="butt" (click)="back()" >Back</button>
-      <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
-      
-  
-        </div>
-     
-  
-        
-    </div>
-  
-    </div>
-  
-  
-  
-  
-  
-  
-  
-     <!-- Permenant Address -->
-  
-  
-  
-    <div id="per"  *ngIf="num == 2" formGroupName="permenantAddress">
-      
 
-      <div id="heading2">
-        <h3>Permenant Address</h3>
-        <button (click)="sameAs()">Same As Local</button>
-        
-      </div>
-    
-      <div id="fields">
-    
-       
-        <div>
-          <input id="inpu" type="number" placeholder="House Number" formControlName="house_number" >
-      <input id="inpu"  type="text" placeholder="LandMark" formControlName="landmark">
-    
-      <input id="inpu" type="text" placeholder="Street Name"formControlName="street_name">
-      <input id="inpu"  type="text" placeholder="City Name" formControlName="city_name">
-    
-      <input id="inpu" type="text" placeholder="Taluka" formControlName="taluka">
-      <input id="inpu"  type="text" placeholder="District" formControlName="district">
-    
-      <input id="inpu" type="text" placeholder="State" formControlName="state">
-      <input id="inpu" type="text" placeholder="Country" formControlName="country">
-      <input id="inpu" type="number" placeholder="Pin Code" formControlName="pin_code">
-      <button id="butt" (click)="back()" >Back</button>
-        <button id="butt" (click)="saveLocal()">Next</button>
-       
-          </div>
-      
-      </div>
-      
-    
-  
-    </div>
-  
-  
-  
-     
-  
-  
-  
-  
-  
-  
-  
-  
-    <!-- Bank Details -->
-  
-    <div id="per"  *ngIf="num == 3"  formGroupName="BankDetails">
-  
-      <div id="heading2">
-        <h3>Bank Details</h3>
-        
-      </div>
-    
-      <div id="fields">
-    
-        
-        <div>
-          <input id="inpu"  type="text" placeholder="Account Holder Name" formControlName="AcholderName" >
-        <input id="inpu" type="text" placeholder="Bank Account Number" formControlName="accountNo">
-        <input id="inpu"  type="text" placeholder="Bank Name" formControlName="bankName">
-      
-        <input id="inpu" type="text" placeholder="IFSC code" formControlName="bankifsccode">
-        <input id="inpu"  type="text" placeholder="Branch Name" formControlName="bankBranchName">
-      
-      
-        <select id="inpu" style="color: gray; border: none;"  name="Account Type" formControlName="accounttype">
-          <option style="color: gray;"  value="">ACCOUNT TYPE</option>
-          <option  value="">Current</option>
-          <option  value="">Saving</option>
-        </select>
-      
-        
-        <button id="butt" (click)="saveLocal()">Save & Next</button>
-        <button id="butt" (click)="back()" >Back</button>
-          </div>
-    
-      </div>
-    
-  
-    </div>
-  
-  
-  
-  
-  
-    <div id="perDoc"  *ngIf="num == 4" formGroupName="documentsUpload" >
-  
-      <div id="heading2">
-        <h3>Document Upload</h3>
-        
-      </div>
-    
-      <div id="fieldsInpu">
-    
-        
-        
-        <div>
-  
-            <div id="innnpppp">
-        
-                <input type="file" class="custom-file-input1" id="cs1">
-                <input type="file" class="custom-file-input2">
-              
-            </div>
-            <div  id="innnpppp">
-              <input type="file" class="custom-file-input3">
-              <input type="file" class="custom-file-input4">
-            </div>
-  
-        
-      
-        
-        <button id="butt" type="submit">Save</button>
-        <button id="butt" (click)="back()" >Back</button>
-          </div>
 
-      </div>
-    
-  
-    </div>
-  
-   
-  
+  </form>
 
-    </form>
-  
-  
-  
+
+
+</div> 
