@@ -1,7 +1,7 @@
 export class CustomerBankdetails 
 {
     accountNo:number;
-    // Acholdername:string;
+    acholdername:string;
    
     bankName:string;
     bankBranchName:string;

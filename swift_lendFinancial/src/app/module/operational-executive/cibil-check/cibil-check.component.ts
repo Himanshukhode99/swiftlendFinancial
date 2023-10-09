@@ -69,20 +69,20 @@ export class CibilCheckComponent {
     generateCibil(): void {
   
       // // Validate PAN number
-      // if (!this.isValidPan(this.emiForm.value.panNumber)) {
+       if (!this.isValidPan(this.emiForm.value.panNumber)) {
        
-      //   // Swal.fire({
-      //   //   position:'top',
-      //   //   showConfirmButton:false,
-      //   //   icon:'warning',
-      //   //   title:'INVALID PAN NUMBER',
-      //   //   timer:1500
+       Swal.fire({
+        position:'top',
+         showConfirmButton:false,
+         icon:'warning',
+         title:'INVALID PAN NUMBER',
+        timer:1500
           
         
-      //   // })
+       })
         
-      //   return  ;
-      // }
+         return  ;
+      }
         
     
   

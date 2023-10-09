@@ -14,7 +14,7 @@ export class Customer
     localAddress: any;
     permenantAddress:any;
     bankDetails:any;
-    // documents:any
+    documents:any
 
 
 
