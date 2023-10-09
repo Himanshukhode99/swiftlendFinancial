@@ -7,6 +7,7 @@ import { ViewEnqueryComponent } from './view-enquery/view-enquery.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ViewAcceptLoanComponent } from './view-accept-loan/view-accept-loan.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoanApplicationComponent } from './loan-application/loan-application.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddEnqueryComponent,
     ViewEnqueryComponent,
     FeedbackComponent,
-    ViewAcceptLoanComponent
+    ViewAcceptLoanComponent,
+    LoanApplicationComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,48 @@
+#downBut{
+
+    height: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#calcu{
+    color: #999898;
+    display: flex;
+    justify-content:space-around;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 0%;
+    
+        
+    }
+#calculattt{
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    color: #999898;
+    
+    
+}
+#calculatter:hover #calcu  {
+    color: #aa141d;
+}
+
+ #calculatter:hover #calculattt{
+    color: #aa141d;
+ }
+ #logo{
+    height: 70px;
+    width: 260px;
+    margin-left: 10px; 
+    margin-top: 0%;
+
+}
+#calculatter{
+    margin-top: 10%;
+
+}

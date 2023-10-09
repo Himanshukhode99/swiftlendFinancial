@@ -8,8 +8,13 @@ import { Enquiry } from '../model/enquiry';
 })
 export class CommonService {
  
+  delete(e: any) {
+    throw new Error('Method not implemented.');
+  }
+ 
  
   cust: Enquiry;
+  emp: any;
   
   
   constructor( public http: HttpClient) { }
@@ -34,6 +39,12 @@ export class CommonService {
       return  this.http.get("http://localhost:9093/Swift_Lend_Financial/getEnquiriesByMail/"+id);
     }
 
+
+    getAllEmp() {
+
+
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallemp")
+    }
 
     
     

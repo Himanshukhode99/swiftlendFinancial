@@ -4,12 +4,14 @@ import { AddEnqueryComponent } from './add-enquery/add-enquery.component';
 import { ViewEnqueryComponent } from './view-enquery/view-enquery.component';
 import { ViewAcceptLoanComponent } from './view-accept-loan/view-accept-loan.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { LoanApplicationComponent } from './loan-application/loan-application.component';
 
 const routes: Routes = [
   {path:'addenq',   component:AddEnqueryComponent},
   {path:'viewenq',  component:ViewEnqueryComponent},
   {path:'feedback', component:FeedbackComponent},
-  {path:'viewloan', component:ViewAcceptLoanComponent}
+  {path:'viewloan', component:ViewAcceptLoanComponent},
+  {path:'loanapp', component: LoanApplicationComponent}
  
 ];
 

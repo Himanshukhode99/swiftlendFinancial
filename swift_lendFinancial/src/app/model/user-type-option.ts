@@ -7,7 +7,9 @@ export class UserTypeOption
             admin:[
               {label:'add employeee' ,path:'addemp'},
               {label:'manage employee' ,path:'manageemp'},
-              {label:'app static' ,path:'static'}
+              {label:'app static' ,path:'static'},
+             
+              
               
 
             ],
@@ -15,7 +17,8 @@ export class UserTypeOption
                   {label:'Add Enquiry' , path:'addenq'},
                   {label:'View Enquiry' , path :'viewenq'},
                   {label:'view accept Loan', path:'viewloan'},
-                  {label:'feedback' ,path:'feedback'}
+                  {label:'feedback' ,path:'feedback'},
+                  {label:'Loan Application',path :'loanapp'}
                 ],
             oe:[
               {label:'requested enquries' , path :'requestinq'},
