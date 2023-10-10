@@ -8,6 +8,7 @@ import { Enquiry } from '../model/enquiry';
 })
 export class CommonService {
  
+ 
   delete(e: any) {
     throw new Error('Method not implemented.');
   }
@@ -20,27 +21,29 @@ export class CommonService {
   constructor( public http: HttpClient) { }
 
 
-  saveEnquiry(enquiry: Enquiry)
+  saveEnquiry(enquiry: any)
    {
-    return this.http.post("http://localhost:9093/Swift_Lend_Financial/saveEnquiry",enquiry);
+    return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveEnquiry",enquiry);
     }
     getallEnquiry()
     {
-      return this.http.get("http://localhost:9093/Swift_Lend_Financial/getEnquiries");
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getEnquiries");
     }
 
-    saveLoanApplication(FormData: any) {
+    saveLoanApplication(FormData: any)
+     {
    
       return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveCustomer",FormData);
     }
 
     getByEmail(id:string)
     {
-      return  this.http.get("http://localhost:9093/Swift_Lend_Financial/getEnquiriesByMail/"+id);
+      return  this.http.get("http://localhost:9099/Swift_Lend_Financial/getEnquiriesByMail/"+id);
     }
 
 
-    getAllEmp() {
+    getAllEmp() 
+    {
 
 
       return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallemp")
@@ -53,4 +56,26 @@ export class CommonService {
     employeeReg(formdata: FormData) {
      return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveemp",formdata);
     }
+
+
+    saveCibil(enquiry:any) {
+      
+      return this.http.put("http://localhost:9099/Swift_Lend_Financial/updateCustomerEnquiry",enquiry);
+    }
+
+
+    reject(s:any)
+    {
+      return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveRejected",s)
+    }
+
+
+
+    // deleteBy(email :any)
+
+    // {
+
+  
+    //   return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email)
+    // }
 }

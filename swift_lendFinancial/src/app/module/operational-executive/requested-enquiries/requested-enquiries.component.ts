@@ -14,20 +14,33 @@ export class RequestedEnquiriesComponent {
   constructor(public cs:CommonService,public fb:FormBuilder,
     private route:ActivatedRoute){}
   cust:Enquiry[];
-  enq:Enquiry[]=[];
+  enq:Enquiry[];
+
  
   ngOnInit()
   {
+   this.enq=[]; 
+
     this.cs.getallEnquiry().subscribe((enquery:Enquiry[])=>{
     
       enquery.forEach(val=>{
-        if(val.enquiryStatus=="send to check cibil")
+        if(val.cibilstatus=="send to check cibil" )
         {
           this.enq.push(val);
+
+
         }
       })
-      // this.enq=enquery;
+      
     })
+
+    
+
+  }
+  changeVar(){
+
+  
+
   }
   
 

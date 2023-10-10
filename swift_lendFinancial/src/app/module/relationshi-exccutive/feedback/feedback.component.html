@@ -8,19 +8,27 @@
 <th>Customer Mob</th>
 <th>Customer Addr</th>
 <th>Customer Pan</th>
+<th>CIBIL Score</th>
+<th>CIBIL Status</th>
+
 <th>Select</th>
 <th>Reject</th>
 </tr>
-<tr>
-<td>ajay</td>
-<td>ajay@123</td>
-<td>25</td>
-<td>1234567890</td>
-<td>123456789009</td>
-<td>1234567890</td>
-<td><button type="button" class="btn btn-outline-danger">Select</button></td>
+<tr *ngFor="let s of checked">
+<td>{{s.name}}</td>
+<td>{{s.email}}</td>
+<td>{{s.age}}</td>
+<td>{{s.mob}}</td>
+<td>{{s.addr}}</td>
+<td>{{s.pan}}</td>
+<td>{{s.cibilscore}}</td>
+<td>{{s.cibilstatus}}</td>
+
+
+
+<td><button type="button" class="btn btn-outline-danger" (click)="approve(s)">Approve</button></td>
 <td>
-  <button type="button" class="btn btn-outline-danger">Reject</button>
+  <button type="button" class="btn btn-outline-danger" (click)="reject(s)">Reject</button>
 </td>
 </tr>
 

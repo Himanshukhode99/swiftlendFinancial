@@ -19,21 +19,21 @@ export class ViewEnqueryComponent {
     this.cs.getallEnquiry().subscribe((enquery:Enquiry[])=>{
     
       enquery.forEach(val=>{
-        if(val.enquiryStatus=="null")
+        if(val.cibilstatus==null )
         {
           this.enq.push(val);
         }
       })
-      // this.enq=enquery;
+      
     })
   }
   
   cibil(c:Enquiry) {
 
-    c.enquiryStatus="send to check cibil";
+    c.cibilstatus="send to check cibil";
     console.warn(c);
   
-    this.cs.saveEnquiry(c).subscribe();
+    this.cs.saveCibil(c).subscribe();
     window.location.reload();
     }
 

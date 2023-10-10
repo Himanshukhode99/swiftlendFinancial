@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./cibil-check.component.css']
 })
 export class CibilCheckComponent {
+  cibilscore: number;
 
   constructor(private route:Router, private fb:FormBuilder,
     private activatedroute:ActivatedRoute,
@@ -20,16 +21,11 @@ export class CibilCheckComponent {
   }
   
      
-  top: number;
-  monthlyInterestRatio: number;
-  bottom: number;
-  sp: number;
-  full: number;
-  emi: number;
-    interestt: number;
-    total: number;
   
   
+    enquiry:any
+  
+
   emiForm: FormGroup;
     ngOnInit(): void {
       this.emiForm = this.fb.group({
@@ -42,13 +38,25 @@ export class CibilCheckComponent {
       this.activatedroute.snapshot.params['id'];
       this.cs.getByEmail(this.activatedroute.snapshot.params['id']).subscribe((e:any)=>{
         this.emiForm.patchValue(e);
+        this.enquiry=e;
+
+
       });
+      
+  
 
       const modeldiv=document.getElementById('myModal');
   if(modeldiv!=null)
   {
   modeldiv.style.display='block';
   }
+   
+
+
+
+
+
+
     }
     // update() {
     //   this.monthlyInterestRatio = (this.emiForm.value.interest / 100) / 12;
@@ -65,29 +73,32 @@ export class CibilCheckComponent {
     name: string;
     date: Date;
     cibil: number;
+    // cibilistatus:string;
+    
+    
   
     generateCibil(): void {
   
-      // // Validate PAN number
-       if (!this.isValidPan(this.emiForm.value.panNumber)) {
+      // // // Validate PAN number
+      //  if (!this.isValidPan(this.emiForm.value.panNumber)) {
        
-       Swal.fire({
-        position:'top',
-         showConfirmButton:false,
-         icon:'warning',
-         title:'INVALID PAN NUMBER',
-        timer:1500
+      //  Swal.fire({
+      //   position:'top',
+      //    showConfirmButton:false,
+      //    icon:'warning',
+      //    title:'INVALID PAN NUMBER',
+      //   timer:1500
           
         
-       })
+      //  })
         
-         return  ;
-      }
+      //    return  ;
+      // }
         
     
   
       // Generate a random number for CIBIL score (between 300 and 900)
-      this.cibil = Math.floor(Math.random() * (900 - 300 + 1)) + 300;
+      this.cibil = Math.floor(Math.random() * (900 - 400 + 1)) + 400;
     }
   
     isValidPan(pan: string): boolean 
@@ -98,6 +109,40 @@ export class CibilCheckComponent {
       const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
       return panRegex.test(pan);
     }
+    savecibil()
+    {
+      
+
+      this.enquiry.cibilscore=this.cibil
+      
+
+      if(this.enquiry.cibilscore >=400 && this.enquiry.cibilscore <500)
+      {
+         this.enquiry.cibilstatus = "Bad" ;
+          this.cs.saveCibil(this.enquiry).subscribe();
+      }
+       else if(this.enquiry.cibilscore>500 && this.enquiry.cibilscore<700)
+      {
+        this.enquiry.cibilstatus = "Good";
+
+         this.cs.saveCibil(this.enquiry).subscribe();
+      }
+     else if(this.enquiry.cibilscore>700 && this.enquiry.cibilscore>=900)
+      {
+        this.enquiry.cibilstatus = "Excellent";
+         this.cs.saveCibil(this.enquiry).subscribe();
+      }
+
+    
+
+alert("CIBIL Saved")
+         
+
+        
+
+
+    }
+    
   
     
     Closedmodel()
