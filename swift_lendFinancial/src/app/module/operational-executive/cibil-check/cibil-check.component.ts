@@ -116,18 +116,18 @@ export class CibilCheckComponent {
       this.enquiry.cibilscore=this.cibil
       
 
-      if(this.enquiry.cibilscore >=400 && this.enquiry.cibilscore <500)
+      if(this.enquiry.cibilscore >=400 && this.enquiry.cibilscore <=500)
       {
          this.enquiry.cibilstatus = "Bad" ;
           this.cs.saveCibil(this.enquiry).subscribe();
       }
-       else if(this.enquiry.cibilscore>500 && this.enquiry.cibilscore<700)
+     if(this.enquiry.cibilscore>=501 && this.enquiry.cibilscore<=700)
       {
         this.enquiry.cibilstatus = "Good";
 
          this.cs.saveCibil(this.enquiry).subscribe();
       }
-     else if(this.enquiry.cibilscore>700 && this.enquiry.cibilscore>=900)
+      if(this.enquiry.cibilscore>=701 && this.enquiry.cibilscore>=900)
       {
         this.enquiry.cibilstatus = "Excellent";
          this.cs.saveCibil(this.enquiry).subscribe();
