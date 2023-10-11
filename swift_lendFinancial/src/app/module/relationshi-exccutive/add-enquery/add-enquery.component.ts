@@ -23,7 +23,8 @@ export class AddEnqueryComponent {
       mob:[],
       address:[],
       pan:[],
-      aadhar:[]
+      aadhar:[],
+      loanamount:[]
     
      
       
