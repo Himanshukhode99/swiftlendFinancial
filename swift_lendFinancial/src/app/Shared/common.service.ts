@@ -36,6 +36,11 @@ export class CommonService {
       return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveCustomer",FormData);
     }
 
+    getAllCustomers()
+    {
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallcustomer")
+    }
+
     getByEmail(id:string)
     {
       return  this.http.get("http://localhost:9099/Swift_Lend_Financial/getEnquiriesByMail/"+id);
@@ -66,16 +71,16 @@ export class CommonService {
 
     reject(s:any)
     {
-      return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveRejected",s)
+      return this.http.post("http://localhost:9099/saveRejected",s)
     }
 
 
 
-    // deleteBy(email :any)
+    deleteBy(email :any)
 
-    // {
+    {
 
   
-    //   return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email)
-    // }
+      return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email)
+    }
 }

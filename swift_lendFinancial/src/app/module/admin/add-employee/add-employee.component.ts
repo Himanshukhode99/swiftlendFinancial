@@ -174,6 +174,8 @@ this.cs.employeeReg(formdata).subscribe();
 
 alert("zal re baaa")
 
+this.personaldetails.reset();
+
   }
 
   aadharcard:any;

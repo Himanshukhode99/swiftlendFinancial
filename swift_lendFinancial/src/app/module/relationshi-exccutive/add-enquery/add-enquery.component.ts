@@ -39,6 +39,8 @@ export class AddEnqueryComponent {
   
     // window.location.reload();
 
+    this.enquiry.reset();
+
   }
 
 

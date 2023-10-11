@@ -33,6 +33,9 @@ if(v.cibilscore != 0){
 
     this.cs.saveEnquiry(s).subscribe();
 
+
+    
+
     alert("Mail Sent")
   }
 
@@ -43,9 +46,11 @@ if(v.cibilscore != 0){
     alert("rejected");
 
 
-    // this.cs.deleteBy(s.email).subscribe();
+    this.cs.deleteBy(s.email).subscribe();
 
-    // alert("deleted Successfully")
+    alert("deleted Successfully")
+
+    window.location.reload();
 
   }
 
