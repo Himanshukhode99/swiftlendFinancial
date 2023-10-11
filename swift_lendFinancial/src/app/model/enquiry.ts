@@ -7,6 +7,7 @@ export class Enquiry {
     mob:number
     address:string
     pan:string
+    loanamount:number;
     cibilscore:number
     cibilstatus:string
     enquiryStatus:string

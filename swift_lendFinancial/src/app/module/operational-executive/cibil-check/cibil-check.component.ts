@@ -133,6 +133,8 @@ export class CibilCheckComponent {
          this.cs.saveCibil(this.enquiry).subscribe();
       }
 
+
+      alert(this.enquiry.cibilstatus)
     
 
 alert("CIBIL Saved")

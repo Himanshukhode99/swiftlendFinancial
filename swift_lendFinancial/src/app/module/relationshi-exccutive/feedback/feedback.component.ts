@@ -31,12 +31,14 @@ if(v.cibilscore != 0){
   }
   approve(s:any){
 
-    this.cs.saveEnquiry(s).subscribe();
-
-
-    
+    this.cs.acceptedEnquiry(s).subscribe();
 
     alert("Mail Sent")
+
+
+    this.cs.deleteBy(s.email).subscribe();
+
+    window.location.reload();
   }
 
   reject(s:any){

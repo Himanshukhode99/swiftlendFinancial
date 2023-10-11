@@ -74,6 +74,11 @@ export class CommonService {
       return this.http.post("http://localhost:9099/saveRejected",s)
     }
 
+    acceptedEnquiry(s:any){
+
+      return this.http.post("http://localhost:9099/saveAccepted",s)
+    }
+
 
 
     deleteBy(email :any)
