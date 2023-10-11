@@ -1,0 +1,283 @@
+<div id="main">
+
+    <!-- Personal Details -->
+     
+       <form [formGroup]="personaldetails" style="justify-content: center; display: flex;" >
+       <div id="loc" *ngIf="num == 0"  >
+    
+       <div id="fields">
+     
+         
+         <div>
+         <img src="assets\images\logo.png" alt="" id="logo">
+   <table>
+   <h2 style="color: #AA141d; margin-left:250%;">EmployeeDetails</h2> 
+   <tr>
+   <th>Employee Id</th>  
+   <th>Employee Name</th>
+   <th>Employee Mob</th>
+   <th>Employee Dob</th>
+   <th>Employee Email</th>
+   <th>Employee Gender</th>
+   <th>Employee Designation</th>
+   <th>Action</th>
+   </tr>
+   <tr>
+       <td>1</td>  
+   <td>raj</td>
+   <td>1234567890</td>
+   <td>12345678</td>
+   <td>asdfgh1234</td>
+   <td>asdfgh</td>
+   <td>sdfgh</td>
+   <td> 
+   <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
+   </td>
+   </tr>
+   
+   </table>
+   
+           </div>
+     
+       </div>
+     
+       </div>
+   
+        <!-- Local Address -->
+     
+   <div id="loc" *ngIf="num == 1"  >
+     
+     
+        <div id="fields">
+     
+         
+         <div style="margin-bottom: 10px;">
+           <img src="assets\images\logo.png" alt="" id="logo">
+           <table>
+           <h2 style="color: #AA141d; margin-left:400%;">localAddress</h2> 
+           <tr>
+           <th>Address Id</th>  
+           <th>House No</th>
+           <th>LandMark</th>
+           <th>Street Name</th>
+           <th>City Name</th>
+           <th>Taluka</th>
+           <th>District</th>
+           <th>State</th>
+           <th>Country</th>
+           <th>PinCode</th>
+           <th>Action</th>
+           </tr>
+          
+           <tr>
+               <td>1</td>  
+           <td>AAI</td>
+           <td>Bridge</td>
+           <td>sdfg</td>
+           <td>asdfgh1234</td>
+           <td>asdfgh</td>
+           <td>dfgh</td>
+           <td>dfghj</td>
+           <td>sdfghjk</td>
+           <td>wertyu</td>
+           <td> 
+           <button id="butt" (click)="back()" >Back</button>
+           <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
+           </td>
+           </tr>
+           
+           </table>
+         
+           </div>
+        
+       </div>
+     
+       </div>
+     
+   
+        <!-- Permenant Address  -->
+    
+     
+     
+       <div id="per"  *ngIf="num == 2" >
+  
+       
+         <div id="fields">
+       
+          
+           <div>
+               <img src="assets\images\logo.png" alt="" id="logo">
+               <table>
+               <h2 style="color: #AA141d; margin-left:250%;">PermenantAddress</h2> 
+               <tr>
+               <th>Address Id</th>  
+               <th>House No</th>
+               <th>LandMark</th>
+               <th>Street Name</th>
+               <th>City Name</th>
+               <th>Taluka</th>
+               <th>District</th>
+               <th>State</th>
+               <th>Country</th>
+               <th>PinCode</th>
+               <th>Action</th>
+               </tr>
+               <tr>
+                   <td>1</td>  
+               <td>AAI</td>
+               <td>Bridge</td>
+               <td>sdfg</td>
+               <td>asdfgh1234</td>
+               <td>asdfgh</td>
+               <td>dfgh</td>
+               <td>dfghj</td>
+               <td>sdfghjk</td>
+               <td>wertyu</td>
+               <td> 
+               <button id="butt" (click)="back()" >Back</button>
+               <button id="butt"  (click)="saveLocal()">Next</button>
+               </td>
+               </tr>
+               
+               </table>
+             
+             </div>
+         
+         </div>
+         
+       
+     
+       </div> 
+      
+     
+       <!-- Bank Details -->
+     
+       <div id="per"  *ngIf="num == 3" >
+     
+       
+         <div id="fields">
+       
+           
+           <div>
+               <img src="assets\images\logo.png" alt="" id="logo">
+               <table>
+               <h2 style="color: #AA141d; margin-left:300%;">BankDetails</h2> 
+               <tr>
+               <th>Account No</th>  
+               <th>Holder Name</th>
+               <th>Bank Name</th>
+               <th>Branch Name</th>
+               <th>Bank IFSCcode</th>
+               <th>Account Type</th>
+               <th>Action</th>
+              </tr>
+               <!-- <tr *ngFor="let e of emp">
+               <td>{{e.employeeId}}</td>  
+               <td>{{e.employeeName}}</td>
+               <td>{{e.mobile}}</td>
+               <td>{{e.dob}}</td>
+               <td>{{e.email}}</td>
+               <td>{{e.gender}}</td>
+               <td>{{e.designation}}</td>
+               </tr> -->
+               <tr>
+                   <td>7418585</td>  
+               <td>raj</td>
+               <td>swift</td>
+               <td>MH</td>
+               <td>741852</td>
+               <td>Current</td>
+               <td> 
+                   <!-- dfgh
+                   <button ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+               <button ><i class="fa fa-trash" aria-hidden="true"></i></button>  -->
+               
+               <button id="butt" (click)="back()" >Back</button>
+           <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
+               </td>
+               </tr>
+               
+               </table>
+            
+             </div>
+       
+         </div>
+       
+     
+       </div> 
+     
+     
+     
+         <!-- document Upload   -->
+     
+       <div id="perDoc"  *ngIf="num == 4"  >
+     
+       
+         <div id="fieldsInpu">
+       
+           <div>
+               <img src="assets\images\logo.png" alt="" id="logo">
+               <table style="width: 30%; left: 57%;">
+               <h2 style="color: #AA141d; margin-left:250%;">DocumentUpload</h2> 
+               <tr>
+               <th>Document Id</th>  
+               <th>AadharCard</th>
+               <th>Pancard</th>
+               <th>Profile Photo</th>
+               <th>signature</th>
+               <th>Salary Slip</th>
+               <th>Driving License</th>
+               <th>Bank Statement</th>
+               <th>Car_Quatation</th>
+               <th>Form16</th>
+               <th>Income_Tax_Return</th>
+               </tr>
+               <!-- <tr *ngFor="let e of emp">
+               <td>{{e.employeeId}}</td>  
+               <td>{{e.employeeName}}</td>
+               <td>{{e.mobile}}</td>
+               <td>{{e.dob}}</td>
+               <td>{{e.email}}</td>
+               <td>{{e.gender}}</td>
+               <td>{{e.designation}}</td>
+               <td> 
+                   <button (click)="edit(e)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+               <button (click)="delete(e)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+               </td>
+               </tr> -->
+               <tr>
+                   <td>1</td>  
+               <td>raj</td>
+               <td>1234567890</td>
+               <td>12345678</td>
+               <td>asdfgh1234</td>
+               <td>asdfgh</td>
+               <td>sdfgh</td>
+               <td>dfghj</td>
+               <td>ertyui</td>
+               <td>23456</td>
+               <td> 
+                  <button id="butt" type="submit">Verified</button>
+                  <button id="butt"  (click)="back()" >Back</button>
+               </td>
+               </tr>
+               
+               </table>
+               
+             </div>
+     
+         </div>
+       
+     
+       </div> 
+      
+      
+     
+     
+       </form>
+     
+     
+     
+     </div> 
+     
+   <router-outlet></router-outlet>

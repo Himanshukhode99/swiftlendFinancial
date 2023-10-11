@@ -51,7 +51,7 @@ export class CommonService {
     {
 
 
-      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallemp")
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallemp");
     }
 
     

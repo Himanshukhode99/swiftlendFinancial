@@ -5,13 +5,15 @@ import { OperationalExecutiveRoutingModule } from './operational-executive-routi
 import { RequestedEnquiriesComponent } from './requested-enquiries/requested-enquiries.component';
 import { DocumentVerificationComponent } from './document-verification/document-verification.component';
 import { CibilCheckComponent } from './cibil-check/cibil-check.component';
-import{ReactiveFormsModule} from '@angular/forms'
+import{ReactiveFormsModule} from '@angular/forms';
+import { VerificationComponent } from './verification/verification.component'
 
 @NgModule({
   declarations: [
     RequestedEnquiriesComponent,
     DocumentVerificationComponent,
-    CibilCheckComponent
+    CibilCheckComponent,
+    VerificationComponent
   ],
   imports: [
     CommonModule,

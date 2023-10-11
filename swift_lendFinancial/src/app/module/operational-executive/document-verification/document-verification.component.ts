@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { CommonService } from 'src/app/Shared/common.service';
 import { Enquiry } from 'src/app/model/enquiry';
+
+import { FormBuilder, FormGroup } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-document-verification',
@@ -9,6 +12,7 @@ import { Enquiry } from 'src/app/model/enquiry';
   styleUrls: ['./document-verification.component.css']
 })
 export class DocumentVerificationComponent {
+
 
   
   constructor(public cs:CommonService,public fb:FormBuilder){}
@@ -40,4 +44,5 @@ export class DocumentVerificationComponent {
 
   }
 
+ 
 }

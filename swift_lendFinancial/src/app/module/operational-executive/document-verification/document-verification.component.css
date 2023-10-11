@@ -5,6 +5,7 @@
     display: flex;
     }
     table{
+
  
     
      
@@ -15,6 +16,20 @@
      border-radius:10px;
   
      margin-left: 20px;
+
+        
+        position: absolute;
+    z-index: 2;
+    left: 52%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 60%; 
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+
     
     }
     td , th{
@@ -38,6 +53,7 @@
     }
     tr:nth-child(even){
      background-color: #eeeeee;
+
     }
     #logo{
         height: 70px;
@@ -45,4 +61,5 @@
         margin-left: 40%; 
         /* margin-top: 10%; */
     
+
     }
