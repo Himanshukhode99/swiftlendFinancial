@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserTypeOption } from 'src/app/model/user-type-option';
 
@@ -16,7 +16,7 @@ export class MenuComponent {
 
   a:any;
   userRoles:Array<any>;
-  
+  @Input() getName:string;
   ngOnInit(): void {
    this.type= sessionStorage.getItem('type');
 

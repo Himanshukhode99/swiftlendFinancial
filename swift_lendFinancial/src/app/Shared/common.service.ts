@@ -20,7 +20,10 @@ export class CommonService {
 
   constructor( public http: HttpClient) { }
 
-
+  getAllUser()
+  {
+    return this.http.get("http://localhost:9099/Swift_Lend_Financial/getuser");
+  }
   saveEnquiry(enquiry: any)
    {
     return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveEnquiry",enquiry);

@@ -20,6 +20,7 @@ import { ApplicationDashboardComponent } from './entry/application-dashboard/app
 import { UserOptionPipe } from './pipe/user-option.pipe';
 import { MainTempleteComponent } from './templates/main-templete/main-templete.component'
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeNamePipe } from './pipe/employee-name.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     ApplicationDashboardComponent,
     
     UserOptionPipe,
-          MainTempleteComponent
+          MainTempleteComponent,
+          EmployeeNamePipe
   ],
   imports: [
     BrowserModule,
