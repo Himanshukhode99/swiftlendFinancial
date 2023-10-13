@@ -38,3 +38,42 @@ table{
    #action{
        margin-left:0px;
    }
+   td,th{
+    text-align: left;
+   }
+   input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+   
+  }
+  
+  input[type=checkbox] {
+    display: none;
+  }
+  
+  input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    
+  }
+
+  input[type=checkbox]:checked + label:before {
+    background-color:#AA141d;
+    border-color: #AA141d;
+    color: #fff;
+  }
+  .but{
+    color: #AA141d;
+    padding: 4px 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}

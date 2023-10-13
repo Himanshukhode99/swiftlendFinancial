@@ -57,3 +57,10 @@
     
 
     }
+    .but{
+        color: #AA141d;
+        padding: 4px 15px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
+   
