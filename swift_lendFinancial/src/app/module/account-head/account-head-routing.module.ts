@@ -7,13 +7,13 @@ import { CreditAmountComponent } from './credit-amount/credit-amount.component';
 import { DefaulterComponent } from './defaulter/defaulter.component';
 
 const routes: Routes = [
-  {path:'approveloan',component:ApproveLoanComponent},
+  {path:'approve-loan',component:ApproveLoanComponent},
   {
     path:'ledger',component:LedgerComponent
   },
-  {path:'viewledger',component:ViewLedgerComponent},
-  {path:'creditamt',component:CreditAmountComponent},
-  {path:'defaulter',component:DefaulterComponent}
+  {path:'view_ledger',component:ViewLedgerComponent},
+  {path:'cedit_amt',component:CreditAmountComponent},
+  {path:'default',component:DefaulterComponent}
 ];
 
 @NgModule({

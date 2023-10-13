@@ -70,7 +70,7 @@
     }
     
     .loan-calculator .result .value::before{
-    content: "₹";
+    
     font-size: 24px;
     font-weight: 400;
     margin-right: 6px;
