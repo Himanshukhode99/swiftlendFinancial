@@ -5,10 +5,10 @@ import { GenerateSanctionComponent } from './generate-sanction/generate-sanction
 
 const routes: Routes = [
   {
-    path:'verifiedapp',component:VerifiedApplicationComponent
+    path:'verify-app',component:VerifiedApplicationComponent
   },
   {
-    path:'genratesanction',component:GenerateSanctionComponent
+    path:'gensanc',component:GenerateSanctionComponent
   }
 ];
 
