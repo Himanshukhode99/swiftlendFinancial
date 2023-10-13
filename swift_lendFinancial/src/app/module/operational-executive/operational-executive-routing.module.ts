@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path:'verification',component:VerificationComponent
   }
+  ,
+  {
+    path:'verification/:email',component:VerificationComponent
+  }
   
 
 

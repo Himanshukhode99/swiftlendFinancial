@@ -11,7 +11,8 @@ const routes: Routes = [
   {path:'viewenq',  component:ViewEnqueryComponent},
   {path:'feedback', component:FeedbackComponent},
   {path:'viewloan', component:ViewAcceptLoanComponent},
-  {path:'loanapp', component: LoanApplicationComponent}
+  {path:'loanapp', component: LoanApplicationComponent},
+  {path:'loanapp/:email', component: LoanApplicationComponent}
  
 ];
 

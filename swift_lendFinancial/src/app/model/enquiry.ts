@@ -1,10 +1,12 @@
 export class Enquiry {
 
     id:number;
-    name:string
+    first_name:string
+    middle_name:string
+    last_name:string
     email:string
     age:number
-    mob:number
+    mobile:number
     address:string
     pan:string
     loanamount:number;

@@ -8,28 +8,38 @@
        <div id="fields">
      
          
-         <div>
+         <div style="margin: 0px; padding: 0px; width: 1252.8;">
+          
          <img src="assets\images\logo.png" alt="" id="logo">
-   <table>
-   <h2 style="color: #AA141d; margin-left:250%;">EmployeeDetails</h2> 
+   <table style="transform: scale(.7);">
+   <h2 style="color: #AA141d; margin-left:250%;">CustomerDetails</h2> 
    <tr>
-   <th>Employee Id</th>  
-   <th>Employee Name</th>
-   <th>Employee Mob</th>
-   <th>Employee Dob</th>
-   <th>Employee Email</th>
-   <th>Employee Gender</th>
-   <th>Employee Designation</th>
+
+   <th>Customer First Name</th>
+   <th>Customer Middle Name</th>
+   <th>Customer Last Name</th>
+   <th>Customer Mother Name</th>
+   <th>Customer Mob</th>
+   <th>Customer Dob</th>
+   <th>Customer Email</th>
+   <th>Customer Gender</th>
+   <th>Customer No. Of Dependent </th>
    <th>Action</th>
    </tr>
-   <tr>
-       <td>1</td>  
-   <td>raj</td>
-   <td>1234567890</td>
-   <td>12345678</td>
-   <td>asdfgh1234</td>
-   <td>asdfgh</td>
-   <td>sdfgh</td>
+
+
+   <tr *ngFor="let s of customerArr">
+         
+   <td>{{s.first_name}}</td>
+   <td>{{s.middle_name}}</td>
+   <td>{{s.last_name}}</td>
+   <td>{{s.mother_name}}</td>
+   <td>{{s.mobile}}</td>
+   <td>{{s.dob}}</td>
+   <td>{{s.email}}</td>
+   <td>{{s.gender}}</td>
+   <td>{{s.noofdependent}}</td>
+   
    <td> 
    <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
    </td>
@@ -53,7 +63,7 @@
          
          <div style="margin-bottom: 10px;">
            <img src="assets\images\logo.png" alt="" id="logo">
-           <table>
+           <table style="transform: scale(.8);">
            <h2 style="color: #AA141d; margin-left:400%;">localAddress</h2> 
            <tr>
            <th>Address Id</th>  
@@ -69,17 +79,19 @@
            <th>Action</th>
            </tr>
           
-           <tr>
-               <td>1</td>  
-           <td>AAI</td>
-           <td>Bridge</td>
-           <td>sdfg</td>
-           <td>asdfgh1234</td>
-           <td>asdfgh</td>
-           <td>dfgh</td>
-           <td>dfghj</td>
-           <td>sdfghjk</td>
-           <td>wertyu</td>
+           <tr *ngFor="let s of customerArr">
+            <td>{{s.localAddress.house_number}}</td>
+            <td>{{s.localAddress.landmark}}</td>
+            <td>{{s.localAddress.street_name}}</td>
+            <td>{{s.localAddress.city_name}}</td>
+            <td>{{s.localAddress.taluka}}</td>
+            <td>{{s.localAddress.district}}</td>
+            <td>{{s.localAddress.state}}</td>
+            <td>{{s.localAddress.country}}</td>
+            <td>{{s.localAddress.pin_code}}</td>
+            
+           
+
            <td> 
            <button id="butt" (click)="back()" >Back</button>
            <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
@@ -107,7 +119,7 @@
           
            <div>
                <img src="assets\images\logo.png" alt="" id="logo">
-               <table>
+               <table style="transform: scale(.8);">
                <h2 style="color: #AA141d; margin-left:250%;">PermenantAddress</h2> 
                <tr>
                <th>Address Id</th>  
@@ -122,17 +134,16 @@
                <th>PinCode</th>
                <th>Action</th>
                </tr>
-               <tr>
-                   <td>1</td>  
-               <td>AAI</td>
-               <td>Bridge</td>
-               <td>sdfg</td>
-               <td>asdfgh1234</td>
-               <td>asdfgh</td>
-               <td>dfgh</td>
-               <td>dfghj</td>
-               <td>sdfghjk</td>
-               <td>wertyu</td>
+               <tr *ngFor="let s of customerArr">
+                <td>{{s.permenantAddress.house_number}}</td>
+                <td>{{s.permenantAddress.landmark}}</td>
+                <td>{{s.permenantAddress.street_name}}</td>
+                <td>{{s.permenantAddress.city_name}}</td>
+                <td>{{s.permenantAddress.taluka}}</td>
+                <td>{{s.permenantAddress.district}}</td>
+                <td>{{s.permenantAddress.state}}</td>
+                <td>{{s.permenantAddress.country}}</td> 
+                <td>{{s.permenantAddress.pin_code}}</td>
                <td> 
                <button id="butt" (click)="back()" >Back</button>
                <button id="butt"  (click)="saveLocal()">Next</button>
@@ -160,7 +171,7 @@
            
            <div>
                <img src="assets\images\logo.png" alt="" id="logo">
-               <table>
+               <table style="transform: scale(.8);">
                <h2 style="color: #AA141d; margin-left:300%;">BankDetails</h2> 
                <tr>
                <th>Account No</th>  
@@ -172,21 +183,21 @@
                <th>Action</th>
               </tr>
                <!-- <tr *ngFor="let e of emp">
-               <td>{{e.employeeId}}</td>  
-               <td>{{e.employeeName}}</td>
+               <td>{{e.CustomerId}}</td>  
+               <td>{{e.CustomerName}}</td>
                <td>{{e.mobile}}</td>
                <td>{{e.dob}}</td>
                <td>{{e.email}}</td>
                <td>{{e.gender}}</td>
                <td>{{e.designation}}</td>
                </tr> -->
-               <tr>
-                   <td>7418585</td>  
-               <td>raj</td>
-               <td>swift</td>
-               <td>MH</td>
-               <td>741852</td>
-               <td>Current</td>
+               <tr *ngFor="let s of customerArr">
+                <td>{{s.bankDetails.accountNo}}</td>
+                <td>{{s.bankDetails.acholdername}}</td>
+                <td>{{s.bankDetails.bankName}}</td>
+                <td>{{s.bankDetails.bankBranchName}}</td>
+                <td>{{s.bankDetails.bankifsccode}}</td>
+                <td>{{s.bankDetails.accounttype}}</td>
                <td> 
                    <!-- dfgh
                    <button ><i class="fa fa-pencil" aria-hidden="true"></i></button>
@@ -217,7 +228,7 @@
        
            <div>
                <img src="assets\images\logo.png" alt="" id="logo">
-               <table style="width: 30%; left: 57%;">
+               <table style="transform: scale(.8);">
                <h2 style="color: #AA141d; margin-left:250%;">DocumentUpload</h2> 
                <tr>
                <th>Document Id</th>  
@@ -233,8 +244,8 @@
                <th>Income_Tax_Return</th>
                </tr>
                <!-- <tr *ngFor="let e of emp">
-               <td>{{e.employeeId}}</td>  
-               <td>{{e.employeeName}}</td>
+               <td>{{e.CustomerId}}</td>  
+               <td>{{e.CustomerName}}</td>
                <td>{{e.mobile}}</td>
                <td>{{e.dob}}</td>
                <td>{{e.email}}</td>
@@ -245,7 +256,7 @@
                <button (click)="delete(e)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                </td>
                </tr> -->
-               <tr>
+               <tr *ngFor="let s of customerArr">
                    <td>1</td>  
                <td>raj</td>
                <td>1234567890</td>

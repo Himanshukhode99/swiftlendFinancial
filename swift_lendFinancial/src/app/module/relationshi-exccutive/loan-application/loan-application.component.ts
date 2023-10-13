@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from 'src/app/Shared/common.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class LoanApplicationComponent {
   personaldetails: FormGroup<any>;
 
 
-  constructor(public fb:FormBuilder, public cs:CommonService , public router:Router){}
+  constructor(public fb:FormBuilder, public cs:CommonService , public router:Router , public activeroute:ActivatedRoute){}
   saveForm : FormGroup;
   @ViewChild("adhar") addhar:ElementRef;
   @ViewChild("pan") pan:ElementRef;
@@ -97,30 +97,21 @@ export class LoanApplicationComponent {
 
 
 
-    }),
+    })
 
-    // documents:this.fb.group({
-
-
-    //   aadharcard:[],
-    //   pancard:[],
-    //   profile_photo:[],
-    //   signature:[],
-    //   salary_slip:[],
-    //   driving_license:[],
-    //   bank_statement:[],
-    //   car_quatation:[],
-    //   form16:[],
-    //   income_tax_return:[]
-
-
-    // })
-   
-   
+    
 
     
 
 
+    })
+
+    this.activeroute.snapshot.params['email'];
+    this.cs.getApprovedByEmail(this.activeroute.snapshot.params['email']).subscribe((a:any)=>{
+
+
+      this.personaldetails.patchValue(a);
+      
     })
 
     

@@ -16,6 +16,9 @@ export class CommonService {
  
   cust: Enquiry;
   emp: any;
+
+
+  customer:any[];
   
   
   constructor( public http: HttpClient) { }
@@ -88,4 +91,23 @@ export class CommonService {
   
       return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email)
     }
+
+
+    getApproved()
+    {
+      return this.http.get("http://localhost:9099/getApproved")
+    }
+
+    getApprovedByEmail(email: string)
+    {
+      return this.http.get("http://localhost:9099/getApprovedByEmail/"+ email)
+    }
+
+
+
+    getLoanApplicationForm(email:any)
+    {
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getSingleCustomer/"+email)
+    }
+
 }

@@ -10,7 +10,11 @@
     <form class="container" [formGroup]="enquiry" (ngSubmit)="save()">
     <div class="col-5">   
          
-<input id="inpu" type="text" placeholder="Name" formControlName="name">
+        <div>
+<input id="inpu" type="text" placeholder="First Name" formControlName="first_name">
+<input id="inpu" type="text" placeholder="Middle Name" formControlName="middle_name">
+</div>
+<input id="inpu" type="text" placeholder="Last Name" formControlName="last_name">
 <input id="inpu" type="email" placeholder="E-mail" formControlName="email">
 </div>
 <div>
@@ -18,7 +22,7 @@
 <input id="inpu" type="text" placeholder="PAN" formControlName="pan">
 </div>
 <div>
-<input id="inpu" type="tel" placeholder="Contact Number" formControlName="mob">
+<input id="inpu" type="tel" placeholder="Contact Number" formControlName="mobile">
 <input id="inpu" type="text" placeholder="Address" formControlName="address">
 </div>
 <div >

@@ -17,10 +17,12 @@ export class AddEnqueryComponent {
   
   ngOnInit(){
   this.enquiry=this.fb.group({
-    name:[],
+    first_name:[],
+    middle_name:[],
+    last_name:[],
       email:[],
       age:[],
-      mob:[],
+      mobile:[],
       address:[],
       pan:[],
       aadhar:[],

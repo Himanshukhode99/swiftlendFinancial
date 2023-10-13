@@ -1,15 +1,10 @@
 table{
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%,-50%);
-    width: 60%; 
+    
     border-collapse: collapse;
     border-spacing: 0;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
     border-radius: 12px 12px 0 0;
-    overflow: hidden;
+    
    
    }
    td , th{
@@ -35,11 +30,10 @@ table{
     background-color: #eeeeee;
    }
    #logo{
-       height: 70px;
-       width: 260px;
-       margin-left: 30px; 
-       margin-top: 20%;
-   
+       height: 50px;
+       width: auto;
+       
+       
    }
    #action{
        margin-left:0px;

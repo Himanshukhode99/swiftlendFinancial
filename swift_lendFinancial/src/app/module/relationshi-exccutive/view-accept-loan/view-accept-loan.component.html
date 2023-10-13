@@ -1,6 +1,17 @@
+
+
+<div style="justify-content: center; display: flex;"> 
 <img src="assets\images\logo.png" alt="" id="logo">
-<table>
-<h2 style="color: #AA141d; margin-left:250%;">ApprouedLoan</h2> 
+</div>
+
+<div style="justify-content: center; display: flex; margin:0px; padding: 0px;">
+<h1 style="color: #AA141d;  " >Approved Loan</h1> 
+</div>
+
+<table style="transform: scale(.8); margin: 0px;padding: 0px;">
+  
+
+
 <tr>
 <th>Customer Name</th>
 <th>Customer Email</th>
@@ -8,20 +19,21 @@
 <th>Customer Mob</th>
 <th>Customer Addr</th>
 <th>Customer Pan</th>
-<th>Select</th>
-<th>Reject</th>
+<th>Action</th>
 </tr>
-<tr>
-<td>ajay</td>
-<td>ajay@123</td>
-<td>25</td>
-<td>1234567890</td>`
-<td>123456789009</td>
-<td>1234567890</td>
-<td><button type="button" class="btn btn-outline-danger">Select</button></td>
+<tr *ngFor="let a of approved">
+<td>{{a.first_name  + " "+ a.last_name}}</td>
+<td>{{a.email}}</td>
+<td>{{a.age}}</td>
+<td>{{a.mobile}}</td>
+<td>{{a.address}}</td>
+<td>{{a.pan}}</td>
 <td>
-  <button type="button" class="btn btn-outline-danger">Reject</button>
+  <button type="button" class="btn btn-outline-danger" routerLink="/application/re/loanapp/{{a.email}}" (click)="saaa()">Apply Now</button>
 </td>
 </tr>
 
 </table>
+
+
+<router-outlet></router-outlet>

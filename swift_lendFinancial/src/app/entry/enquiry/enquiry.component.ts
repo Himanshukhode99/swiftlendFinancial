@@ -16,10 +16,12 @@ export class EnquiryComponent {
   
   ngOnInit(){
   this.enquiry=this.fb.group({
-    name:[],
+    first_name:[],
+    middle_name:[],
+    last_name:[],
       email:[],
       age:[],
-      mob:[],
+      mobile:[],
       address:[],
       pan:[],
       loanamount:[]

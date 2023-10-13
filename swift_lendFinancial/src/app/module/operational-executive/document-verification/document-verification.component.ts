@@ -3,6 +3,7 @@ import { CommonService } from 'src/app/Shared/common.service';
 import { Enquiry } from 'src/app/model/enquiry';
 
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ export class DocumentVerificationComponent {
 
 
   
-  constructor(public cs:CommonService,public fb:FormBuilder){}
+  constructor(public cs:CommonService,public fb:FormBuilder , public router:Router ){}
   cust:Enquiry[];
   enq:any[];
  
@@ -40,6 +41,13 @@ export class DocumentVerificationComponent {
 
   verify(c:any){
 
+
+
+
+    alert(c.first_name)
+    
+
+    this.router.navigateByUrl('http://localhost:4200/application/oe/verification')
     
 
   }

@@ -30,7 +30,7 @@ export class CibilCheckComponent {
     ngOnInit(): void {
       this.emiForm = this.fb.group({
         pan: ['', Validators.required],
-        name:['', Validators.required],
+        first_name:['', Validators.required],
          mob: ['', Validators.required],
       })
 
@@ -70,7 +70,7 @@ export class CibilCheckComponent {
   
   
     panNumber: string;
-    name: string;
+    first_name: string;
     date: Date;
     cibil: number;
     // cibilistatus:string;
@@ -127,7 +127,7 @@ export class CibilCheckComponent {
 
          this.cs.saveCibil(this.enquiry).subscribe();
       }
-      if(this.enquiry.cibilscore>=701 && this.enquiry.cibilscore>=900)
+      if(this.enquiry.cibilscore>=701 && this.enquiry.cibilscore<=900)
       {
         this.enquiry.cibilstatus = "Excellent";
          this.cs.saveCibil(this.enquiry).subscribe();
