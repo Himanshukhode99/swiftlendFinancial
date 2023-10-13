@@ -1,0 +1,40 @@
+<table >
+    <h2 style="color: #AA141d; margin-left:250%;">CustomerDetails</h2> 
+    <tr>
+    <th>Customer Id</th>  
+    <th>Customer Name</th>
+    <th>Customer Addr</th>
+    <th>Customer Age</th>
+    <th>Customer Email</th>
+    <th>Customer Mob</th>
+    <th>Customer Pan</th>
+    <th>Customer loanAmount</th>
+    <th>Customer CibilScore</th>
+    <th>Customer CibilStatus</th>
+    </tr>
+     <tr *ngFor="let r of rej">
+    <td>{{r.id}}</td>  
+    <td>{{r.name}}</td>
+    <td>{{r.email}}</td>
+    <td>{{r.age}}</td>
+    <td>{{r.mob}}</td>
+    <td>{{r.address}}</td>
+    <td>{{r.pan}}</td>
+   <td>{{r.loanamount}}</td>
+   <td>{{r.cibilscore}}</td>
+   <td>{{r.cibilstatus}}</td>
+    <tr> 
+    <!-- <tr>
+        <td>1</td>  
+    <td>raj</td>
+    <td>1234567890</td>
+    <td>12345678</td>
+    <td>asdfgh1234</td>
+    <td>asdfgh</td>
+    <td>dfghj</td>
+    <td>dfghj</td>
+    <td>dfghj</td>
+    <td>dfghj</td>
+    </tr> -->
+    
+    </table>

@@ -1,26 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { FormGroup } from '@angular/forms';
+
 import { Enquiry } from '../model/enquiry';
+import { RejectCustomer } from '../model/reject-customer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
  
- 
-  delete(e: any) {
-    throw new Error('Method not implemented.');
-  }
- 
- 
+  rej:RejectCustomer;
   cust: Enquiry;
   emp: any;
 
 
+
   customer:any[];
   
-  
+
   constructor( public http: HttpClient) { }
 
 
@@ -49,18 +46,12 @@ export class CommonService {
       return  this.http.get("http://localhost:9099/Swift_Lend_Financial/getEnquiriesByMail/"+id);
     }
 
-
     getAllEmp() 
     {
-
-
+      
       return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallemp");
     }
-
     
-    
-
-
     employeeReg(formdata: FormData) {
      return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveemp",formdata);
     }
@@ -74,7 +65,7 @@ export class CommonService {
 
     reject(s:any)
     {
-      return this.http.post("http://localhost:9099/saveRejected",s)
+      return this.http.post("http://localhost:9099/Swift_Lend_Financial/saveRejected",s)
     }
 
     acceptedEnquiry(s:any){
@@ -82,14 +73,17 @@ export class CommonService {
       return this.http.post("http://localhost:9099/saveAccepted",s)
     }
 
-
-
     deleteBy(email :any)
-
     {
+      return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email);
+    }
+    delete(e: any) 
+    {
+      return this.http.delete("http://localhost:9099/Swift_Lend_Financial/employeeId/"+e);
+    }
 
-  
-      return this.http.delete("http://localhost:9099/Swift_Lend_Financial/deleteCustomerEnquiry/"+email)
+    getAllReject() {
+      return this.http.get("http://localhost:9099/Swift_Lend_Financial/getallrejected");
     }
 
 

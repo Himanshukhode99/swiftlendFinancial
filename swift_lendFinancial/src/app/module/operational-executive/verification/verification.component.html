@@ -10,9 +10,9 @@
          
          <div style="margin: 0px; padding: 0px; width: 1252.8;">
           
-         <img src="assets\images\logo.png" alt="" id="logo">
+         <img src="assets\images\logo.png" alt="" id="logo" style="margin-left: 40%;">
    <table style="transform: scale(.7);">
-   <h2 style="color: #AA141d; margin-left:250%;">CustomerDetails</h2> 
+   <h2 style="color: #AA141d; margin-left:300%;">CustomerDetails</h2> 
    <tr>
 
    <th>Customer First Name</th>
@@ -44,6 +44,18 @@
    <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
    </td>
    </tr>
+   <!-- <tr>
+    <td>raj</td>
+    <td>raj</td>
+    <td>late</td>
+    <td>rani</td>
+    <td>1234567890</td>
+    <td>12345</td>
+    <td>raj@123</td>
+    <td>female</td>
+    <td>741</td>
+    <td><button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button></td>
+   </tr> -->
    
    </table>
    
@@ -62,7 +74,7 @@
      
          
          <div style="margin-bottom: 10px;">
-           <img src="assets\images\logo.png" alt="" id="logo">
+           <img src="assets\images\logo.png" alt="" id="logo" style="margin-left: 40%;">
            <table style="transform: scale(.8);">
            <h2 style="color: #AA141d; margin-left:400%;">localAddress</h2> 
            <tr>
@@ -89,15 +101,26 @@
             <td>{{s.localAddress.state}}</td>
             <td>{{s.localAddress.country}}</td>
             <td>{{s.localAddress.pin_code}}</td>
-            
-           
-
            <td> 
            <button id="butt" (click)="back()" >Back</button>
            <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
            </td>
            </tr>
-           
+           <!-- <tr>
+            <td>12345</td>
+            <td>aai</td>
+            <td>asdfgh</td>
+            <td>abad</td>
+            <td>abad</td>
+            <td>abad</td>
+            <td>sdfgh</td>
+            <td>ertyu</td>
+            <td>fghj</td>
+            <td>
+              <button id="butt" (click)="back()" >Back</button>
+           <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
+            </td>
+           </tr> -->
            </table>
          
            </div>
@@ -118,7 +141,7 @@
        
           
            <div>
-               <img src="assets\images\logo.png" alt="" id="logo">
+               <img src="assets\images\logo.png" alt="" id="logo" style="margin-left: 40%;">
                <table style="transform: scale(.8);">
                <h2 style="color: #AA141d; margin-left:250%;">PermenantAddress</h2> 
                <tr>
@@ -134,7 +157,7 @@
                <th>PinCode</th>
                <th>Action</th>
                </tr>
-               <tr *ngFor="let s of customerArr">
+               <!-- <tr *ngFor="let s of customerArr">
                 <td>{{s.permenantAddress.house_number}}</td>
                 <td>{{s.permenantAddress.landmark}}</td>
                 <td>{{s.permenantAddress.street_name}}</td>
@@ -148,8 +171,22 @@
                <button id="butt" (click)="back()" >Back</button>
                <button id="butt"  (click)="saveLocal()">Next</button>
                </td>
+               </tr> -->
+               <tr>
+                <td>12345</td>
+                <td>aai</td>
+                <td>asdfgh</td>
+                <td>abad</td>
+                <td>abad</td>
+                <td>abad</td>
+                <td>sdfgh</td>
+                <td>ertyu</td>
+                <td>fghj</td>
+                <td>
+                  <button id="butt" (click)="back()" >Back</button>
+               <button id="butt"  (click)="saveLocal()">Next</button>
+                </td>
                </tr>
-               
                </table>
              
              </div>
@@ -170,7 +207,7 @@
        
            
            <div>
-               <img src="assets\images\logo.png" alt="" id="logo">
+               <img src="assets\images\logo.png" alt="" id="logo" style="margin-left: 40%;">
                <table style="transform: scale(.8);">
                <h2 style="color: #AA141d; margin-left:300%;">BankDetails</h2> 
                <tr>
@@ -182,16 +219,7 @@
                <th>Account Type</th>
                <th>Action</th>
               </tr>
-               <!-- <tr *ngFor="let e of emp">
-               <td>{{e.CustomerId}}</td>  
-               <td>{{e.CustomerName}}</td>
-               <td>{{e.mobile}}</td>
-               <td>{{e.dob}}</td>
-               <td>{{e.email}}</td>
-               <td>{{e.gender}}</td>
-               <td>{{e.designation}}</td>
-               </tr> -->
-               <tr *ngFor="let s of customerArr">
+               <!-- <tr *ngFor="let s of customerArr">
                 <td>{{s.bankDetails.accountNo}}</td>
                 <td>{{s.bankDetails.acholdername}}</td>
                 <td>{{s.bankDetails.bankName}}</td>
@@ -199,15 +227,22 @@
                 <td>{{s.bankDetails.bankifsccode}}</td>
                 <td>{{s.bankDetails.accounttype}}</td>
                <td> 
-                   <!-- dfgh
-                   <button ><i class="fa fa-pencil" aria-hidden="true"></i></button>
-               <button ><i class="fa fa-trash" aria-hidden="true"></i></button>  -->
-               
                <button id="butt" (click)="back()" >Back</button>
            <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
                </td>
+               </tr> -->
+               <tr>
+                <td>12345678</td>
+                <td>asdfg</td>
+                <td>wertyui</td>
+                <td>wertyui</td>
+                <td>12345</td>
+                <td>lkjhg</td>
+                <td>
+                  <button id="butt" (click)="back()" >Back</button>
+           <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
+                </td>
                </tr>
-               
                </table>
             
              </div>
@@ -227,9 +262,9 @@
          <div id="fieldsInpu">
        
            <div>
-               <img src="assets\images\logo.png" alt="" id="logo">
-               <table style="transform: scale(.8);">
-               <h2 style="color: #AA141d; margin-left:250%;">DocumentUpload</h2> 
+               <img src="assets\images\logo.png" alt="" id="logo" style="margin-left: 45%;">
+               <table style="transform: scale(.8); margin-left: 5%;">
+               <h2 style="color: #AA141d; margin-left:350%;">DocumentUpload</h2> 
                <tr>
                <th>Document Id</th>  
                <th>AadharCard</th>

@@ -8,6 +8,7 @@ import { AppStatisticsComponent } from './app-statistics/app-statistics.componen
 import { ReactiveFormsModule, FormBuilder } from "@angular/forms";
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
+import { RejectCustomerComponent } from './reject-customer/reject-customer.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
     AppStatisticsComponent,
     ViewEmployeeComponent,
     ViewEnquiryComponent,
+    RejectCustomerComponent,
   ],
   imports: [
     CommonModule,

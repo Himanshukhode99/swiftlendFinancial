@@ -5,6 +5,7 @@ import { ManageEmployeesComponent } from './manage-employees/manage-employees.co
 import { AppStatisticsComponent } from './app-statistics/app-statistics.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { RejectCustomerComponent } from './reject-customer/reject-customer.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
       {
         path:'viewenq',component:ViewEnquiryComponent
       },
+      {
+        path:'rejectcust',component:RejectCustomerComponent
+      }
     ]
   },
 ];

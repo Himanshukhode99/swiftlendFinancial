@@ -27,7 +27,7 @@ employeeform:FormGroup;
 
   delete(e:any)
   {
-    //this.cs.delete(e).subscribe();
+    this.cs.delete(e).subscribe();
   }
 
 
