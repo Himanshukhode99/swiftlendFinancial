@@ -4,6 +4,7 @@ import { RequestedEnquiriesComponent } from './requested-enquiries/requested-enq
 import { DocumentVerificationComponent } from './document-verification/document-verification.component';
 import { CibilCheckComponent } from './cibil-check/cibil-check.component';
 import { VerificationComponent } from './verification/verification.component';
+import { VieeewComponent } from './vieeew/vieeew.component';
 
 const routes: Routes = [
   {path:'requestinq',component:RequestedEnquiriesComponent},
@@ -18,6 +19,9 @@ const routes: Routes = [
     path:'verification/:email',component:VerificationComponent
   }
   
+  ,{
+    path:'vieew/:email/www', component:VieeewComponent
+  }
 
 
 ];

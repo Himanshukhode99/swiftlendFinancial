@@ -28,7 +28,7 @@
    </tr>
 
 
-   <!-- <tr *ngFor="let s of customerArr">
+   <tr *ngFor="let s of customerArr">
          
    <td>{{s.first_name}}</td>
    <td>{{s.middle_name}}</td>
@@ -43,19 +43,8 @@
    <td> 
    <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
    </td>
-   </tr> -->
-   <tr>
-    <td>raj</td>
-    <td>raj</td>
-    <td>late</td>
-    <td>rani</td>
-    <td>1234567890</td>
-    <td>12345</td>
-    <td>raj@123</td>
-    <td>female</td>
-    <td>741</td>
-    <td><button class="but" style="align-self: center;"   (click)="saveLocal()">Next</button></td>
    </tr>
+   
    
    </table>
    
@@ -91,7 +80,7 @@
            <th>Action</th>
            </tr>
           
-           <!-- <tr *ngFor="let s of customerArr">
+           <tr *ngFor="let s of customerArr">
             <td>{{s.localAddress.house_number}}</td>
             <td>{{s.localAddress.landmark}}</td>
             <td>{{s.localAddress.street_name}}</td>
@@ -105,23 +94,8 @@
            <button id="butt" (click)="back()" >Back</button>
            <button id="butt" style="align-self: center;" (click)="saveLocal()">Next</button>
            </td>
-           </tr> -->
-           <tr>
-            <td>12345</td>
-            <td>aai</td>
-            <td>asdfgh</td>
-            <td>abad</td>
-            <td>abad</td>
-            <td>abad</td>
-            <td>sdfgh</td>
-            <td>ertyu</td>
-            <td>fghj</td>
-            <td>1234</td>
-            <td>
-              <button class="but" (click)="back()" >Back</button>
-           <button class="but" style="align-self: center;" (click)="saveLocal()">Next</button>
-            </td>
-           </tr>
+           </tr> 
+          
            </table>
          
            </div>
@@ -158,7 +132,7 @@
                <th>PinCode</th>
                <th>Action</th>
                </tr>
-               <!-- <tr *ngFor="let s of customerArr">
+               <tr *ngFor="let s of customerArr">
                 <td>{{s.permenantAddress.house_number}}</td>
                 <td>{{s.permenantAddress.landmark}}</td>
                 <td>{{s.permenantAddress.street_name}}</td>
@@ -172,23 +146,8 @@
                <button id="butt" (click)="back()" >Back</button>
                <button id="butt"  (click)="saveLocal()">Next</button>
                </td>
-               </tr> -->
-               <tr>
-                <td>12345</td>
-                <td>aai</td>
-                <td>asdfgh</td>
-                <td>abad</td>
-                <td>abad</td>
-                <td>abad</td>
-                <td>sdfgh</td>
-                <td>ertyu</td>
-                <td>fghj</td>
-                <td>3456</td>
-                <td>
-                  <button class="but" (click)="back()" >Back</button>
-               <button class="but" style="align-self: center;" (click)="saveLocal()">Next</button>
-                </td>
                </tr>
+               
                </table>
              
              </div>
@@ -221,7 +180,7 @@
                <th>Account Type</th>
                <th>Action</th>
               </tr>
-               <!-- <tr *ngFor="let s of customerArr">
+               <tr *ngFor="let s of customerArr">
                 <td>{{s.bankDetails.accountNo}}</td>
                 <td>{{s.bankDetails.acholdername}}</td>
                 <td>{{s.bankDetails.bankName}}</td>
@@ -232,19 +191,8 @@
                <button id="butt" (click)="back()" >Back</button>
            <button id="butt" style="align-self: center;"   (click)="saveLocal()">Next</button>
                </td>
-               </tr> -->
-               <tr>
-                <td>12345678</td>
-                <td>asdfg</td>
-                <td>wertyui</td>
-                <td>wertyui</td>
-                <td>12345</td>
-                <td>lkjhg</td>
-                <td>
-                  <button class="but" (click)="back()" >Back</button>
-           <button class="but" style="align-self: center;"   (click)="saveLocal()">Next</button>
-                </td>
                </tr>
+              
                </table>
             
              </div>
@@ -269,64 +217,64 @@
                 <h2 style="color: #AA141d; margin-left: 60%;">DocumentUpload</h2>
 
 
-   <!-- <tr *ngFor="let s of customerArr"> -->
-    <tr>
+  <tr > 
+    <tr *ngFor="let s of customerArr">
     <th>AadharCard</th>
-    <td>555 77 854</td>
+    <td  ><img [src]="'data:image/jpeg;base64,'+s.documents.aadharcard" height="150" width="150" > </td>
     <td><input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
       <label for="fruit1">Verified</label></td>
   </tr>
-  <tr>
-    <th>Pancard</th>
-    <td>555 77 855</td>
+  <tr *ngFor="let s of customerArr"s>
+    <th >Pancard</th>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.pancard" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit2" name="fruit-2" value="Apple">
       <label for="fruit2">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Profile Photo</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.profile_photo" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit3" name="fruit-3" value="Apple">
       <label for="fruit3">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Signature</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.signature " height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit4" name="fruit-4" value="Apple">
       <label for="fruit4">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Salary Slip</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.salary_slip" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit5" name="fruit-5" value="Apple">
       <label for="fruit5">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Driving License</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.driving_license" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit6" name="fruit-6" value="Apple">
       <label for="fruit6">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
      <th>Bank Statement</th>
-     <td>555 77 855</td>
+     <td><img [src]="'data:image/jpeg;base64,'+s.documents.bank_statement" height="150" width="150" ></td>
      <td><input type="checkbox" id="fruit7" name="fruit-7" value="Apple">
       <label for="fruit7">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
      <th>Car_Quatation</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.car_quatation" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit8" name="fruit-8" value="Apple">
       <label for="fruit8">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Form16</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.form16" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit9" name="fruit-9" value="Apple">
       <label for="fruit9">Verified</label></td>
   </tr>
-  <tr>
+  <tr *ngFor="let s of customerArr">
     <th>Income_Tax_Return</th>
-    <td>555 77 855</td>
+    <td><img [src]="'data:image/jpeg;base64,'+s.documents.income_tax_return" height="150" width="150" ></td>
     <td><input type="checkbox" id="fruit10" name="fruit-10" value="Apple">
       <label for="fruit10">Verified</label></td>
   </tr>

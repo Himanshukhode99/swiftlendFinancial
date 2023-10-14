@@ -44,6 +44,7 @@ export class LoginComponent {
       this.userNamePass.forEach((a:any)=>{
 
 
+
         if( un == a.user.username && ps == a.user.password){
 
           if(a.designation =="RE")
@@ -86,18 +87,23 @@ export class LoginComponent {
  
      })
     })
-    
-   
-
-    
-    
-
-
     let un:string=this.loginForm.controls['UserName'].value;
     let ps:string=this.loginForm.controls['Password'].value;
    
     
     
+   
+
+    
+
+    if(un=="re" && ps=="re@123")
+    {
+      this.router.navigateByUrl('/application/re')
+    }
+    
+
+
+   
     
     
       

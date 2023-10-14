@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from 'src/app/Shared/common.service';
@@ -11,8 +11,13 @@ import { CommonService } from 'src/app/Shared/common.service';
 export class VerificationComponent {
   constructor(public fb:FormBuilder, public cs:CommonService , public router:Router,public activeroute:ActivatedRoute){}
 
+  @ViewChild("adhar") addhar:ElementRef;
+
+
+  
+
   personaldetails: FormGroup<any>; 
-  num:number = 0
+  num:number = 4
   saveLocal(){
 
     if(this.num<4)
@@ -31,6 +36,7 @@ export class VerificationComponent {
   customerArr:any[]=[];
 
 
+ 
 
 
 
@@ -44,11 +50,22 @@ export class VerificationComponent {
 
   
     this.customerArr.push(a);
+   
+
+
+
    })
 
 
   }
 
+
+  zoom()
+  {
+
+    this.addhar.nativeElement.sty
+
+  }
 
 
 }
