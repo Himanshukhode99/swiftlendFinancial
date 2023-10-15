@@ -12,8 +12,8 @@ export class EnquiryComponent {
   constructor(private fb:FormBuilder,private router:Router , public cs:CommonService){}
 
   enquiry:FormGroup;
-  
-  
+  email:any;
+  en:any[];
   ngOnInit(){
   this.enquiry=this.fb.group({
     first_name:[],
@@ -31,15 +31,32 @@ export class EnquiryComponent {
   })
 }
   save(){
-    alert("ThankYou For Enquiry");
 
-    this.cs.saveEnquiry(this.enquiry.value).subscribe();
+    this.cs.getallEnquiry().subscribe((enq:any[])=>
+    {
+      this.en=enq;
+      this.en.forEach((e:any)=>
+      {
+        if(e.email==this.enquiry.value.email)
+        {
+          alert("EmailId already Exists!!!!!");
+          this.router.navigateByUrl("");
+        }
+       
+        
+         
+         
+        
+      })
+     
+      alert("ThankYou For Joining Us");
 
-
-
-
-    console.log(this.enquiry.value)
-    this.router.navigateByUrl("")
+      this.cs.saveEnquiry(this.enquiry.value).subscribe();
+       console.log(this.enquiry.value)
+       this.router.navigateByUrl("");
+    });
+    
+    
 
     
 
